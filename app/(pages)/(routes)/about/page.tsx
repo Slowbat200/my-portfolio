@@ -63,6 +63,7 @@ const AboutPage = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
+                  key={skill.id}
                 >
                   <div className='btn-front rounded-xl cursor-pointer flex justify-center items-center'>
                     <Image

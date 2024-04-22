@@ -25,81 +25,97 @@ import {
 
 export const skills = [
   {
+    id: 0,
     image: html,
     name: 'HTML',
     type: 'Frontend',
   },
   {
+    id: 1,
     image: css,
     name: 'CSS',
     type: 'Frontend',
   },
   {
+    id: 2,
     image: javascript,
     name: 'JavaScript',
     type: 'Frontend',
   },
   {
+    id: 3,
     image: git,
     name: 'Git',
     type: 'Version Control',
   },
   {
+    id: 4,
     image: github,
     name: 'GitHub',
     type: 'Version Control',
   },
   {
+    id: 5,
     image: mongodb,
     name: 'MongoDB',
     type: 'Database',
   },
   {
+    id: 6,
     image: supabase,
     name: 'Supabase',
     type: 'Database',
   },
   {
+    id: 7,
     image: sql,
     name: 'SQL',
     type: 'Database',
   },
   {
+    id: 8,
     image: shadcn,
     name: 'Shadcn-UI',
     type: 'Frontend',
   },
   {
+    id: 9,
     image: nodejs,
     name: 'Node.js',
     type: 'Backend',
   },
   {
+    id: 10,
     image: react,
     name: 'React',
     type: 'Frontend',
   },
   {
+    id: 11,
     image: redux,
     name: 'Redux',
     type: 'State Management',
   },
   {
+    id: 12,
     image: sass,
     name: 'Sass',
     type: 'Frontend',
   },
   {
+    id: 13,
     image: nextjs,
     name: 'Next.js',
     type: 'Frontend',
   },
   {
+    id: 14,
     image: tailwindcss,
     name: 'Tailwind CSS',
     type: 'Frontend',
   },
   {
+    id: 15,
     image: typescript,
     name: 'TypeScript',
     type: 'Frontend',

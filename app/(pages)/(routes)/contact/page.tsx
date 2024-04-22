@@ -90,7 +90,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                     />
                   </FormControl>
-                  <FormDescription>What's your name?</FormDescription>
+                  <FormDescription>What&apos;s your name?</FormDescription>
                 </FormItem>
               )}
             />
@@ -107,7 +107,7 @@ const ContactPage = () => {
                       onChange={handleChange}
                     />
                   </FormControl>
-                  <FormDescription>What's your email?</FormDescription>
+                  <FormDescription>What&apos;s your email?</FormDescription>
                 </FormItem>
               )}
             />
@@ -126,7 +126,7 @@ const ContactPage = () => {
                       placeholder='Let me know how I can help you.'
                     />
                   </FormControl>
-                  <FormDescription>What's your message</FormDescription>
+                  <FormDescription>What&apos;s your message</FormDescription>
                 </FormItem>
               )}
             />

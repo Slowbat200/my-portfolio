@@ -15,7 +15,7 @@ const ProjecttPage = () => {
       </h1>
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         I have built many websites since 2021, but the ones I am currently
-        developing are some of my biggest websites. Whether it's this portfolio,
+        developing are some of my biggest websites. Whether it&apos;s this portfolio,
         a web music player, or a web tutorial for budding web developers.
       </div>
 

@@ -14,7 +14,7 @@ const CTA = () => {
     return ( 
         <section className='cta'>
         <p className='cta-text'>
-          Have a projects in your mind? <br className='sm:block hidden' /> Let's
+          Have a projects in your mind? <br className='sm:block hidden' /> Let&apos;s
           build it together
         </p>
         <Button className="btn hover:scale-110 transition">
