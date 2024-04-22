@@ -57,13 +57,12 @@ const AboutPage = () => {
             className='mt-16 justify-around sm:justify-normal flex flex-wrap gap-12'
           >
             {skills.map((skill) => (
-              <div className='block-container w-20 h-20'>
+              <div className='block-container w-20 h-20' key={skill.id}>
                 <div className='btn-back rounded-xl shadow-[5px_0px_30px_#555] dark:shadow-[5px_0px_30px_#a1a]' />
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
-                  key={skill.id}
                 >
                   <div className='btn-front rounded-xl cursor-pointer flex justify-center items-center'>
                     <Image
