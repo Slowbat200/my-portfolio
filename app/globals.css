@@ -1,0 +1,282 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  @apply h-full;
+}
+
+/* Gradients */
+.gradient-01 {
+  background-image: linear-gradient(
+    270deg,
+    hsl(311deg 77% 51%) 0%,
+    hsl(303deg 73% 67%) 26%,
+    hsl(282deg 80% 75%) 39%,
+    hsl(267deg 100% 84%) 50%,
+    hsl(224deg 82% 82%) 61%,
+    hsl(212deg 68% 62%) 74%,
+    hsl(217deg 76% 54%) 100%
+  );
+  filter: blur(100px);
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    97.86deg,
+    #a509ff 0%,
+    #34acc7 53.65%,
+    #a134c7 100%
+  );
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 180px;
+  height: 208px;
+  top: 150px;
+  right: 0px;
+
+  background: #97feed;
+  filter: blur(170px);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 302px;
+  height: 300px;
+  left: 10%;
+  top: 150%;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(150px);
+  transform: rotate(-114.2deg);
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+}
+
+.gradient-05 {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.feedback-gradient {
+  position: absolute;
+  width: 200px;
+  height: 316px;
+  left: 0px;
+  top: 0px;
+
+  background: #8d39a3;
+  filter: blur(175px);
+}
+
+.footer-gradient {
+  position: absolute;
+  width: 500px;
+  height: 100px;
+  left: 37%;
+  bottom: 0;
+
+  background: #65c4fa;
+  filter: blur(150px);
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+.block-container {
+  position: relative;
+  transition: 250ms;
+  perspective: 500px;
+}
+
+/* Skill buttons */
+.block-container .btn-back {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: inherit;
+  height: inherit;
+  transition: 250ms;
+  transform-style: preserve-3d;
+  transform-origin: bottom right;
+  transform: rotateZ(15deg);
+  will-change: transform;
+}
+
+.block-container .btn-back-red {
+  background: linear-gradient(135deg, #ff4b1f -20%, #ff9068 120%);
+}
+
+.block-container .btn-back-green {
+  background: linear-gradient(135deg, #adfda2 -20%, #11d3f3 120%);
+}
+
+.block-container .btn-back-yellow {
+  background: linear-gradient(135deg, #f7971e -20%, #ffd200 120%);
+}
+
+.block-container .btn-back-blue {
+  background: linear-gradient(135deg, #0061ff -20%, #60efff 120%);
+}
+
+.block-container .btn-back-orange {
+  background: linear-gradient(135deg, #ff0f7b -20%, #f89b29 120%);
+}
+
+.block-container .btn-back-pink {
+  background: linear-gradient(135deg, #e81cff -20%, #40c9ff 120%);
+}
+
+.block-container .btn-back-black {
+  background: linear-gradient(135deg, #0a1647 -20%, #e4e7e4 120%);
+}
+
+.block-container .btn-front {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: inherit;
+  height: inherit;
+  background-color: #ffffff33;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: 250ms;
+  transform-style: preserve-3d;
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+.block-container:hover > .btn-back {
+  transform: translateZ(20px) rotateZ(15deg) rotateX(-20deg) rotateY(-20deg);
+}
+
+.block-container:hover > .btn-front {
+  transform: translateZ(80px) translateY(-5px) rotateX(15deg) rotateY(15deg);
+}
+
+@layer utilities {
+  .blue-gradient_text {
+    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  }
+
+  .space-gradient_text {
+    @apply bg-gradient-to-r from-[#B931FC] to-[#9D44C0] bg-clip-text text-transparent;
+  }
+
+  .head-text {
+    @apply sm:text-5xl text-3xl font-semibold sm:leading-snug;
+  }
+
+  /* CTA design */
+  .cta {
+    @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
+  }
+
+  .cta-text {
+    @apply text-[#1D2235] dark:text-white font-extrabold flex-1 text-3xl max-md:text-center;
+  }
+  .max-container {
+    @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[56px] px-8 min-h-[calc(50vh-80px)];
+  }
+  .btn {
+    @apply text-white bg-gradient-to-r from-[#00c6ff] to-[#0072ff] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-10 text-center;
+  }
+  .input {
+    @apply bg-transparent border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
