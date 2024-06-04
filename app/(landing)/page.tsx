@@ -9,6 +9,12 @@ import Info from './components/Info';
 import { Separator } from '@/components/ui/separator';
 import CTA from '@/components/cta';
 import { motion } from 'framer-motion';
+import HireMe from './components/hire';
+import { FlipWords } from '@/components/flip-words';
+import { fadeIn } from '@/utils/motion';
+import Blob from '@/components/Blob';
+
+const words = [`I'm Fullstack developer`, `I'm web developer`];
 
 export default function Home() {
   const handleScroll = () => {
@@ -24,57 +30,29 @@ export default function Home() {
     <main className='w-full h-full relative'>
       <HeroHighlight>
         <section className='flex min-h-screen flex-col items-center justify-between p-24'>
-          <div className='z-10 lg:w-full w-[20em] max-w-5xl items-center justify-between font-mono text-sm lg:flex'>
+          <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
               <motion.h1
-                className='text-[22px] md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3'
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                className='text-[22px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
+                variants={fadeIn('left', 'tween', 0.5, 1)}
+                initial='hidden'
+                whileInView='show'
               >
                 Hello I&apos;m Slowbat
               </motion.h1>
-              <div className='md:ml-[100px] mr-[1px] flex justify-center pb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600'>
-                <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl gap-y-10 font-semibold'>
-                  <TypewriterComponent
-                    options={{
-                      strings: [`I'm Fullstack developer`, `I'm web developer`],
-                      autoStart: true,
-                      loop: true,
-                    }}
-                  />
-                </span>
-              </div>
+              <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl pt-10 font-semibold text-center'>
+                <FlipWords words={words} />
+              </span>
             </div>
+            <Blob />
           </div>
-          {/** Image section with starting animation */}
-          <section id='image'>
-            <motion.div
-              className='flex flex-col gap-y-5'
-              initial={{ opacity: 0, x: 200 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                delay: 1,
-                ease: 'easeIn',
-                type: 'spring',
-                stiffness: 100,
-              }}
-            >
-              <Image
-                src='/profile.png'
-                alt='profile'
-                width={300}
-                height={300}
-              />
-            </motion.div>
-          </section>
           {/** Button section with animation */}
           <section id='button'>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className='my-[5em] lg:mx-[8em] ml-0 md:mt-[40px] md:landscape:right-[5rem] landscape:left-[0rem]'
+              className='my-[5em] lg:mx-[8em] ml-0 md:mt-[40px] mt-[20px] md:landscape:right-[5rem] landscape:left-[0rem]'
             >
               <Button variant='section' onClick={handleScroll}>
                 <ArrowBigDownIcon size={30} />
@@ -89,8 +67,11 @@ export default function Home() {
         <div className='relative'>
           <div className='gradient-02' />
         </div>
-        <div className=''>
+        <div>
           <Info />
+        </div>
+        <div className='pt-16 px-10'>
+          <HireMe />
         </div>
         <div className='max-container'>
           <Separator className='bg-gradient-to-r from-[#45ffca] to-[#ffb6d9]' />

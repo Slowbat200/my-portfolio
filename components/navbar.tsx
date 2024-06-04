@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { UserButton } from '@clerk/nextjs';
 import { Poppins } from 'next/font/google';
