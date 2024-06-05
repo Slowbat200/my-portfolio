@@ -36,7 +36,7 @@ export const Navbar = () => {
         {/** Creating Dark/Light mode toggler */}
         <ModeToggle />
         {/** Creating UserButton which creating account information */}
-        <UserButton afterSignOutUrl='/' />
+        <UserButton afterSignOutUrl='/'/>
       </div>
     </div>
   );

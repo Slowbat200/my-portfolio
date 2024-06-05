@@ -23,10 +23,8 @@ const HireMe = () => {
               I&apos;ll never gonna give you up.
             </AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Reprehenderit deleniti accusamus magnam? Obcaecati delectus nemo
-              aspernatur voluptas at cumque quidem, id, culpa velit nesciunt,
-              libero eligendi. Quisquam, ipsum suscipit! Quibusdam.
+              It means I&apos;ll never give up on you or the job until
+              everything is done.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-2'>
@@ -34,10 +32,8 @@ const HireMe = () => {
               I&apos;ll never gonna let you down.
             </AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              ex neque natus tempore dolorum ea cum assumenda atque libero!
-              Atque debitis deleniti, explicabo quis magnam veritatis delectus
-              iusto dolorem laborum.
+              It means I&apos;ll do my job to the best of my ability so you
+              won&apos;t be disappointed.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-3'>
@@ -45,28 +41,24 @@ const HireMe = () => {
               I&apos;ll never gonna run around and desert you.
             </AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Exercitationem animi saepe harum quisquam. Exercitationem officia
-              ad inventore ipsam dolore fugit. Deleniti accusantium
-              necessitatibus eius qui, in labore quae recusandae nobis!
+              What I mean by that is that if you hire me to do the business, I
+              won&apos;t just leave you and move on to a competitor. I&apos;m
+              loyal to my job, and as long as I&apos;m needed, I won&apos;t run
+              to anyone else.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-4'>
             <AccordionTrigger>Never gonna make you cry.</AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
-              officia libero voluptatibus, molestiae odio animi perspiciatis
-              cumque. Nemo autem, unde magnam pariatur excepturi labore,
-              incidunt voluptatibus sed dignissimos vitae optio.
+              I&apos;m a calm person who can make fun of anything, even myself.
+              That&apos;s why even if the atmosphere in the workplace is rough,
+              I&apos;ll be the one trying to calm it down.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-5'>
             <AccordionTrigger>Never gonna say goodbye.</AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Accusamus temporibus sequi reiciendis eligendi blanditiis
-              voluptatem? Dignissimos laborum quibusdam dolor et voluptatibus
-              ipsam ab, amet esse non quos corrupti rerum repellendus.
+              I&apos;ll never say goodbye until my job is done.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value='item-6'>
@@ -74,10 +66,7 @@ const HireMe = () => {
               Never gonna tell a lie and hurt you.
             </AccordionTrigger>
             <AccordionContent>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
-              quisquam nostrum dicta minima quaerat, tempore distinctio et
-              consectetur sed a laboriosam dolorum ipsa at nisi consequatur modi
-              perferendis, dolores beatae!
+              I will be 100% honest with you and I will always tell the truth.
             </AccordionContent>
           </AccordionItem>
         </Accordion>

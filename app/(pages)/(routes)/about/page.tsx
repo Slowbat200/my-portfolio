@@ -4,8 +4,16 @@ import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import AlternateTimeline from './components/timeline';
+import { useEffect, useState } from 'react';
 
 const AboutPage = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  if(!isMounted) return null
   return (
     <section className='max-container'>
       <motion.h1
@@ -83,5 +91,4 @@ const AboutPage = () => {
     </section>
   );
 };
-
 export default AboutPage;
