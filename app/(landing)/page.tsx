@@ -29,18 +29,18 @@ export default function Home() {
   return (
     <main className='w-full h-full relative'>
       <HeroHighlight>
-        <section className='flex min-h-screen flex-col items-center justify-between p-24'>
+        <section className='flex flex-col items-center justify-between p-24'>
           <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
               <motion.h1
-                className='text-[22px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
+                className='text-[30px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
                 variants={fadeIn('left', 'tween', 0.5, 1)}
                 initial='hidden'
                 whileInView='show'
               >
                 Hello I&apos;m Slowbat
               </motion.h1>
-              <span className='text-xl sm:text-2xl md:text-3xl lg:text-4xl pt-10 font-semibold text-center'>
+              <span className='text-md sm:text-xl md:text-2xl lg:text-3xl pt-10 font-semibold text-center'>
                 <FlipWords words={words} />
               </span>
             </div>

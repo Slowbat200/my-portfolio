@@ -6,7 +6,7 @@ import {Highlight} from '@/components/ui/hero-highlight'
 const Info = () => {
   return (
     <section className='pt-10'>
-      <div className='relative xs:max-container px-10 mx-2 mt-5 pt-2'>
+      <div className='relative xs:max-container px-8 mx-2 mt-5 pt-2'>
         <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
           What I do?
         </h1>
