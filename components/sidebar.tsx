@@ -42,7 +42,7 @@ export const Sidebar = () => {
     return router.push(url);
   };
   return (
-    <div className='space-y-4 flex flex-col h-full text-primary dark:bg-black'>
+    <div className='space-y-4 flex flex-col h-full text-primary dark:bg-black border-r-2 dark:border-0'>
       <div className='p-3 flex-1 justify-center flex'>
         <div className='space-y-2'>
           {routes.map((route) => (

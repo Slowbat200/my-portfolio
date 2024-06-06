@@ -30,7 +30,7 @@ export default function Home () {
   };
   return (
     <main className='w-full h-full relative'>
-        <section className='flex flex-col items-center justify-between p-24 bg-black'>
+        <section className='flex flex-col items-center justify-between p-24 dark:bg-black bg-white'>
           <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
               <motion.h1

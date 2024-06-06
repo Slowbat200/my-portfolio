@@ -6,7 +6,9 @@ const BackgroundPlayer:React.FC = () => {
     const [isPlaying, setIsPlaying] = useState(false)
     const audioRef = useRef<HTMLAudioElement | null>(null)
     useEffect(() => {
-      audioRef.current = new Audio('/sakura.mp3')
+      audioRef.current = new Audio('/slap-house.mp3')
+      audioRef.current.volume = 0.3;
+      audioRef.current.loop = true;
     }, [])
 
     const togglePlay = () => {
@@ -25,7 +27,7 @@ const BackgroundPlayer:React.FC = () => {
           src={isPlaying ? '/soundoff.png' : '/soundon.png'}
           alt='jukebox'
           onClick={togglePlay}
-          className='w-10 h-10 cursor-pointer object-contain'
+          className='w-14 h-14 md:h-10 md:w-10 cursor-pointer object-contain'
         />
       </div>
     )
