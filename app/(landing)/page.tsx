@@ -1,8 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import { HeroHighlight } from '@/components/ui/hero-highlight';
-import TypewriterComponent from 'typewriter-effect';
 import { Button } from '@/components/ui/button';
 import { ArrowBigDownIcon } from 'lucide-react';
 import Info from './components/Info';
@@ -13,10 +11,15 @@ import HireMe from './components/hire';
 import { FlipWords } from '@/components/flip-words';
 import { fadeIn } from '@/utils/motion';
 import Blob from '@/components/Blob';
+import BackgroundPlayer from '@/components/audio-player'
+
+
+
 
 const words = [`I'm Fullstack developer`, `I'm web developer`];
 
-export default function Home() {
+export default function Home () {
+ 
   const handleScroll = () => {
     // Find the next section by its ID or class
     const nextSection = document.getElementById('next-section');
