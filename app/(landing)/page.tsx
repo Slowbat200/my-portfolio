@@ -1,6 +1,5 @@
 'use client';
 
-import { HeroHighlight } from '@/components/ui/hero-highlight';
 import { Button } from '@/components/ui/button';
 import { ArrowBigDownIcon } from 'lucide-react';
 import Info from './components/Info';
@@ -11,7 +10,7 @@ import HireMe from './components/hire';
 import { FlipWords } from '@/components/flip-words';
 import { fadeIn } from '@/utils/motion';
 import Blob from '@/components/Blob';
-import BackgroundPlayer from '@/components/audio-player'
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 
 
@@ -31,8 +30,7 @@ export default function Home () {
   };
   return (
     <main className='w-full h-full relative'>
-      <HeroHighlight>
-        <section className='flex flex-col items-center justify-between p-24'>
+        <section className='flex flex-col items-center justify-between p-24 bg-black'>
           <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
               <motion.h1
@@ -55,7 +53,7 @@ export default function Home () {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 1 }}
-              className='my-[5em] lg:mx-[8em] ml-0 md:mt-[40px] mt-[20px] md:landscape:right-[5rem] landscape:left-[0rem]'
+              className='mt-[8em] relative z-50 lg:mx-[8em] ml-0 md:my-3em  md:landscape:right-[5rem] landscape:left-[0rem]'
             >
               <Button variant='section' onClick={handleScroll}>
                 <ArrowBigDownIcon size={30} />
@@ -63,7 +61,7 @@ export default function Home () {
             </motion.div>
           </section>
         </section>
-      </HeroHighlight>
+      <BackgroundBeams />
 
       {/** Info and CTA section */}
       <section id='next-section' className='dark:bg-black'>

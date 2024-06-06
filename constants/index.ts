@@ -146,7 +146,7 @@ export const projects = [
     icon: Wdt,
     name: 'Web development tutorial',
     description: `Developed a web application that helps begginer developers with web developing. This is just an older version of the site. I'm currently working on the latest version which will include newer technology, a nicer design and much more.`,
-    link: 'https://github.com/Slowbat200/Frontend-tutorial',
+    link: 'https://webdevcourse.vercel.app',
   },
   {
     theme: 'btn-back-green',
