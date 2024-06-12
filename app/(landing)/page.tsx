@@ -34,10 +34,10 @@ export default function Home () {
           <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
               <motion.h1
-                className='text-[30px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
                 variants={fadeIn('left', 'tween', 0.5, 1)}
                 initial='hidden'
                 whileInView='show'
+                className='text-[25px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
               >
                 Hello I&apos;m Slowbat
               </motion.h1>

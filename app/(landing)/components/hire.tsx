@@ -10,7 +10,7 @@ const HireMe = () => {
     <div>
       <h1 className='text-center text-5xl'>Why you should hire me?</h1>
       <p className='pt-3'>
-        If you decide to hire me, I can prove you I&apos;m best and I can
+        If you decide to hire me, I&apos;ll prove you that I&apos;m best and I will
         provide you with all my skills and knowledge that I have learned in the
         time I have been developing websites.
       </p>
