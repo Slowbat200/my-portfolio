@@ -1,7 +1,5 @@
 'use client';
 
-import axios from 'axios';
-import { useState } from 'react';
 import { Zap } from 'lucide-react';
 
 import {
@@ -15,24 +13,12 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useProModal } from '@/hooks/use-sub-modal';
-import toast from 'react-hot-toast';
+// import { useRouter } from 'next/navigation';
 
 export const ProModal = () => {
   const proModal = useProModal();
-  const [loading, setLoading] = useState(false);
+  // const router = useRouter()
 
-  const onSubscribe = async () => {
-    try {
-      setLoading(true);
-      const response = await axios.get('/api/stripe');
-
-      window.location.href = response.data.url;
-    } catch (error) {
-      toast.error('Something went wrong');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   return (
     <Dialog open={proModal.isOpen} onOpenChange={proModal.onClose}>
@@ -55,8 +41,7 @@ export const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
-            disabled={loading}
-            onClick={onSubscribe}
+          // onClick={() => router.push('buymecoffe')}
             size='lg'
             variant='premium'
             className='w-full'
