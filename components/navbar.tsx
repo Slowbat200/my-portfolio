@@ -15,7 +15,10 @@ const font = Poppins({
   subsets: ['latin'],
 });
 
-export const Navbar = () => {
+interface sub {
+  isPro: boolean;
+}
+export const Navbar = ({ isPro }: sub) => {
   const [mounted, setMounted] = useState(false);
   const promodal = useProModal();
 
@@ -23,6 +26,7 @@ export const Navbar = () => {
     setMounted(true);
   }, []);
   if (!mounted) return null;
+  if (isPro) return null;
   return (
     <div className='fixed w-full z-50 flex justify-between items-center py-2 px-4 bg-white border-b-2 dark:border-0 dark:bg-black h-16'>
       <div className='flex items-center'>
