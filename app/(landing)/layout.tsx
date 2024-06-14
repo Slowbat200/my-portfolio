@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/navbar';
 import Sidebar from '@/components/sidebar';
 
+
 const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='h-full'>
