@@ -45,7 +45,7 @@ export const Navbar: React.FC = () => {
         {/** Creating Dark/Light mode toggler */}
         <ModeToggle />
         {/** Creating UserButton which creating account information */}
-        <UserButton afterSignOutUrl='/' />
+        <UserButton afterSignOutUrl='/sign-in' />
       </div>
     </div>
   );

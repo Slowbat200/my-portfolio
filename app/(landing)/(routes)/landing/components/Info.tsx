@@ -9,9 +9,9 @@ const Info = () => {
   return (
     <section className='pt-10'>
       <div className='relative xs:max-container px-8 mx-2 mt-5 pt-2'>
-        <motion.h1 variants={fadeIn('right  ', 'tween', 0.7, 1)} initial='hidden' whileInView={'show'} className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
+        <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
           What I do?
-        </motion.h1>
+        </h1>
         <p className="md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter">
           {features.map((feature)=>(
             <span key={feature.id}>{feature.description}</span>
