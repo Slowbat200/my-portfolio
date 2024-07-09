@@ -3,9 +3,12 @@
 import { cn } from '@/lib/utils';
 import { Home, User, Laptop2, Contact } from 'lucide-react';
 import { usePathname, useRouter } from 'next/navigation';
+import { useState } from 'react';
+import {RingLoader} from 'react-spinners'
 
 export const Sidebar = () => {
   const router = useRouter();
+  const [loading, setLoading] = useState(false); // Add loading state
   const pathname = usePathname();
   /* The `routes` constant is an array of objects that define the navigation routes for the sidebar
   component. Each object represents a route and contains the following properties: */

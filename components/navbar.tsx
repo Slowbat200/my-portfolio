@@ -8,17 +8,14 @@ import { ModeToggle } from '@/components/mode-toggle';
 import { MobileSidebar } from '@/components/mobile-sidebar';
 import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
-import { useProModal } from '@/hooks/use-sub-modal';
 
 const font = Poppins({
   weight: '600',
   subsets: ['latin'],
 });
 
-
-export const Navbar = () => {
+export const Navbar: React.FC = () => {
   const [mounted, setMounted] = useState(false);
-  const promodal = useProModal();
 
   useEffect(() => {
     setMounted(true);
@@ -45,11 +42,6 @@ export const Navbar = () => {
       </div>
       {/** Creating Buttons in Navbar */}
       <div className='flex items-center gap-x-3'>
-        <Button
-          onClick={promodal.onOpen}
-          className='w-fit'
-          variant={'premium'}
-        >Support me</Button>
         {/** Creating Dark/Light mode toggler */}
         <ModeToggle />
         {/** Creating UserButton which creating account information */}

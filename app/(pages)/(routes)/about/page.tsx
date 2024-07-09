@@ -42,6 +42,7 @@ const AboutPage = () => {
               ],
               autoStart: true,
               loop: true,
+              delay: 65
             }}
           />
         </p>

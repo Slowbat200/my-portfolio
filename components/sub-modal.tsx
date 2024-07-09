@@ -13,11 +13,9 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { useProModal } from '@/hooks/use-sub-modal';
-// import { useRouter } from 'next/navigation';
 
 export const ProModal = () => {
   const proModal = useProModal();
-  // const router = useRouter()
 
 
   return (
@@ -41,7 +39,6 @@ export const ProModal = () => {
         </DialogHeader>
         <DialogFooter>
           <Button
-          // onClick={() => router.push('buymecoffe')}
             size='lg'
             variant='premium'
             className='w-full'

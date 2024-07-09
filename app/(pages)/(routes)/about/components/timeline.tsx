@@ -62,7 +62,7 @@ export default function AlternateTimeline() {
         <TimelineContent>
           <Typography>Opening my potentional</Typography>
           <Typography className='text-justify'>
-            After graduation, I fully started learning, for me, new technologies
+            After ending at school, I fully started learning, for me, new technologies
             such as Supabase database, Next.js framework, Typescript or
             Shadcn/ui and many more. In the beginning I did a lot of just
             Front-end development, but now I can create a Fullstack website.{' '}

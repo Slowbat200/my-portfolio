@@ -1,5 +1,4 @@
 import CTA from "@/components/cta";
-import { LinkPreview } from "@/components/ui/link-preview";
 import { projects } from "@/constants";
 import { arrow } from "@/public";
 import Image from "next/image";
@@ -40,12 +39,12 @@ const ProjecttPage = () => {
               </h4>
               <p className='mt-2 text-slate-500'>{project.description}</p>
               <div className='mt-5 flex items-center gap-2 font-poppins'>
-                <LinkPreview
-                url={project.link}
+                <Link
+                href={project.link}
                   className='font-semibold text-blue-600'
                 >
                   Live link
-                  </LinkPreview>
+                  </Link>
                 <Image
                   src={arrow}
                   alt='arrow'
