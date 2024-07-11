@@ -33,14 +33,11 @@ export default function Home () {
         <section className='flex flex-col items-center justify-between p-24 dark:bg-black bg-white'>
           <div className='items-center justify-between font-mono text-sm lg:flex'>
             <div className='flex flex-col'>
-              <motion.h1
-                variants={fadeIn('left', 'tween', 0.5, 1)}
-                initial='hidden'
-                whileInView='show'
+              <h1
                 className='text-[25px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'
               >
                 Hello I&apos;m Slowbat
-              </motion.h1>
+              </h1>
               <span className='text-md sm:text-xl md:text-2xl lg:text-3xl pt-10 font-semibold text-center'>
                 <FlipWords words={words} />
               </span>
@@ -49,16 +46,13 @@ export default function Home () {
           </div>
           {/** Button section with animation */}
           <section id='button'>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 1 }}
+            <div
               className='mt-[8em] relative z-50 lg:mx-[8em] ml-0 md:my-3em  md:landscape:right-[5rem] landscape:left-[0rem]'
             >
               <Button variant='section' onClick={handleScroll}>
                 <ArrowBigDownIcon size={30} />
               </Button>
-            </motion.div>
+            </div>
           </section>
         </section>
       <BackgroundBeams />
