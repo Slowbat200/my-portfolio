@@ -34,7 +34,7 @@ const AboutPage = () => {
             options={{
               strings: [
                 `My name is Jakub Pavlovič, but you can call me Jacob or by my nickname
-                Slowbat. I'm a 19 year-old web developer from the Czech Republic. As I
+                Slowbat. I'm a 20 year-old web developer from the Czech Republic. As I
                 mentioned, I specialize in web development. I have a passion for
                 working with modern web technologies such as Next.js, TailwindCSS,
                 PrismaDB, Supabase, TypeScript, among others. I specialize in creating
