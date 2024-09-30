@@ -9,9 +9,7 @@ import {
   mongodb,
   shadcn,
   nextjs,
-  nodejs,
   react,
-  redux,
   sass,
   tailwindcss,
   typescript,
@@ -79,23 +77,12 @@ export const skills = [
     type: 'Frontend',
   },
   {
-    id: 9,
-    image: nodejs,
-    name: 'Node.js',
-    type: 'Backend',
-  },
-  {
     id: 10,
     image: react,
     name: 'React',
     type: 'Frontend',
   },
-  {
-    id: 11,
-    image: redux,
-    name: 'Redux',
-    type: 'State Management',
-  },
+
   {
     id: 12,
     image: sass,
@@ -145,7 +132,9 @@ export const projects = [
     theme: 'btn-back-red',
     icon: Wdt,
     name: 'Web development tutorial',
-    description: `Developed a web application that helps begginer developers with web developing. This is just an older version of the site. I'm currently working on the latest version which will include newer technology, a nicer design and much more.`,
+    description: `Developed a web application that helps begginer developers with web developing. 
+    This is the latest version of the website and it contains modern technolodies such as Next.js, TailwindCSS, Typescript and Convex Database. 
+    For components I'm using shadcn/ui and Aceternity UI. For icons I'm using react-icons and material icons from Material UI`,
     link: 'https://webdevcourse.vercel.app',
   },
   {
@@ -161,7 +150,7 @@ export const projects = [
     icon: AIChatBot,
     name: 'AI Chat Bot',
     description:
-      'App where you can create your own character, give him/her properties and and communicate with each other',
+      `App where you can create your own character, give him/her 'personality' and communicate with each other`,
     link: 'https://github.com/Slowbat200/ai-companion',
   },
   {

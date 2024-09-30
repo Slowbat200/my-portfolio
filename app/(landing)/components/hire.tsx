@@ -7,7 +7,7 @@ import {
 
 const HireMe = () => {
   return (
-    <div>
+    <div className='mt-10'>
       <h1 className='text-center text-5xl'>Why you should hire me?</h1>
       <p className='pt-3'>
         If you decide to hire me, I&apos;ll prove you that I&apos;m best and I will

@@ -1,91 +1,71 @@
-import * as React from 'react';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem, {timelineItemClasses} from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import Typography from '@mui/material/Typography';
-import { useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
+'use client';
 
-
+import React from 'react';
+import { Timeline } from '@/components/ui/timeline';
 
 export default function AlternateTimeline() {
-  const theme = useTheme();
-  const matches = useMediaQuery(theme.breakpoints.up('md'));
+  const data = [
+    {
+      title: '2024',
+      content: (
+        <div>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
+            Currently working on my biggest project of all time. Its gonna be a
+            websit with courses about Web Development, which includes basic web
+            languages and their libraries and frameworks. I'd like to make the
+            courses more fun than they are on other platforms. Which means there
+            will be more practice than theory, there will be quizzes and a lot
+            of other fun content.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: 'Late 2023',
+      content: (
+        <div>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'>
+            After I end up in the school I started learning by my own and
+            started exploring, for me, new technologies. I began learning,
+            modern technologies such as React.js, TailwindCSS or MongoDB.
+          </p>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'></p>
+        </div>
+      ),
+    },
+    {
+      title: 'Late 2022 and Early 2023',
+      content: (
+        <div>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'>
+            In summer 2022 I started working on my graduation project. It was
+            first version of Web Development courses. It was developed only with
+            HTML, CSS and JavaScript.
+          </p>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'>
+            After graduation I realized it needed a change, then many versions
+            of this project came out.
+          </p>
+        </div>
+      ),
+    },
+    {
+      title: 'Late 2021',
+      content: (
+        <div>
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8'>
+            This was the year I first started learning about web development,
+            this is where my journey as a web developer began. Since then I have
+            created many projects and learned many new things that I still use
+            today
+          </p>
+        </div>
+      ),
+    },
+  ];
   return (
-    <Timeline
-      position={matches ? 'right' : 'right'}
-      sx={{
-        [`& .${timelineItemClasses.root}:before`]: {
-          flex: 0,
-          padding: 0,
-        },
-      }}
-      
-    >
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Typography>Beggining of the journey</Typography>
-          <Typography className='text-justify'>
-            My journey as a web developer began in 2022, when I was in my third
-            year of high school studying IT, where I first discovered the beauty
-            of HTML, CSS and Javascript. I started to focus more on that and
-            started creating simple projects.{' '}
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Typography>End of the school</Typography>
-          <Typography className='text-justify'>
-            In my fourth year, I started discovering technologies that were new
-            to me, such as the React library, the TailwindCSS framework, and the
-            MongoDB database.
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-          <TimelineConnector />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Typography>Opening my potentional</Typography>
-          <Typography className='text-justify'>
-            After ending at school, I fully started learning, for me, new technologies
-            such as Supabase database, Next.js framework, Typescript or
-            Shadcn/ui and many more. In the beginning I did a lot of just
-            Front-end development, but now I can create a Fullstack website.{' '}
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-      <TimelineItem>
-        <TimelineSeparator>
-          <TimelineDot />
-        </TimelineSeparator>
-        <TimelineContent>
-          <Typography>Presence</Typography>
-          <Typography className='text-justify'>
-            I am currently working on projects that I am developing both in
-            Front-end and Backend. On my Github you can find for example the
-            ApexIntel project, which works as a Sass library. Where you can
-            interact with AI that is linked to OpenAI, generate images and code
-            also using OpenAI and generate short videos and music using AI
-            models. Unfortunately at the moment the main part of the site is
-            unavailable due to a change of database provider.{' '}
-          </Typography>
-        </TimelineContent>
-      </TimelineItem>
-    </Timeline>
+    <div className='w-full'>
+      <Timeline data={data} />
+    </div>
   );
 }
