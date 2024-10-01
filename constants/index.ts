@@ -123,7 +123,7 @@ export const socialLinks = [
   {
     name: 'LinkedIn',
     iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+    link: 'https://www.linkedin.com/in/jakub-pavlovic-33b765285/',
   },
 ];
 
