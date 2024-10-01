@@ -12,7 +12,7 @@ export default function AlternateTimeline() {
           <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
             Currently working on my biggest project of all time. Its gonna be a
             websit with courses about Web Development, which includes basic web
-            languages and their libraries and frameworks. I'd like to make the
+            languages and their libraries and frameworks. I&apos;d like to make the
             courses more fun than they are on other platforms. Which means there
             will be more practice than theory, there will be quizzes and a lot
             of other fun content.
