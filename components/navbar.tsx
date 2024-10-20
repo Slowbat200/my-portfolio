@@ -1,52 +1,28 @@
-'use client';
-
 import { cn } from '@/lib/utils';
-import { UserButton } from '@clerk/nextjs';
-import { Poppins } from 'next/font/google';
 import Link from 'next/link';
-import { ModeToggle } from '@/components/mode-toggle';
-import { MobileSidebar } from '@/components/mobile-sidebar';
-import { Button } from '@/components/ui/button';
-import { useEffect, useState } from 'react';
 
-const font = Poppins({
-  weight: '600',
-  subsets: ['latin'],
-});
-
-export const Navbar: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-  if (!mounted) return null;
+export const Navbar = ({ className }: { className?: string }) => {
   return (
-    <div className='fixed w-full z-50 flex justify-between items-center py-2 px-4 bg-white border-b-2 dark:border-0 dark:bg-black h-16'>
-      <div className='flex items-center'>
-        {/** Menu: Creating navbar with hamburger menu in mobile devices */}
-        <MobileSidebar />
-        {/** Creating heading as a link */}
+    <nav
+      className={cn(`fixed z-50 top-10 inset-x-0 max-w-4xl mx-auto`, className)}
+    >
+      <div className='flex justify-evenly items-center h-full border border-transparent dark:border-[#00FFFF] shadow-input rounded-full py-5 bg-transparent backdrop-blur-xl'>
+        <div className='pr-[100px]'>
+          <h1 className='text-3xl'>Slowbat</h1>
+        </div>
         <Link href='/'>
-          <h1
-            className={cn(
-              //primary className
-              'hidden md:block text-xl md:text-3xl font-bold text-primary',
-              //dynamic className
-              font.className
-            )}
-          >
-            Slowbat
-          </h1>
+          <span>Home</span>
+        </Link>
+        <Link href='/about'>
+          <span>About Me</span>
+        </Link>
+        <Link href='/projects'>
+          <span>My Projects</span>
+        </Link>
+        <Link href='/contact'>
+          <span>Contact Me</span>
         </Link>
       </div>
-      {/** Creating Buttons in Navbar */}
-      <div className='flex items-center gap-x-3'>
-        {/** Creating Dark/Light mode toggler */}
-        <ModeToggle />
-        {/** Creating UserButton which creating account information */}
-        <UserButton afterSignOutUrl='/sign-in' />
-      </div>
-    </div>
+    </nav>
   );
 };

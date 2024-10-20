@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import AlternateTimeline from './components/timeline';
 import { useEffect, useState } from 'react';
+import { MobileNavbar } from '@/components/mobile-navbar';
 
 const AboutPage = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -15,9 +16,11 @@ const AboutPage = () => {
 
   if(!isMounted) return null
   return (
-    <section className='max-container'>
+    <section className='max-container relative'>
+    
+
       <motion.h1
-        className='text-center sm:text-5xl text-3xl font-semibold sm:leading-snug'
+        className='text-center sm:text-5xl text-3xl sm:leading-snug'
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
@@ -26,10 +29,10 @@ const AboutPage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        About me
+        <span className='blue-gradient_text font-semibold drop-shadow'>About</span> me
       </motion.h1>
       <div className='mt-5 flex flex-col gap-3 dark:text-slate-300 text-slate-500'>
-        <p className='text-justify tracking-tighter'>
+        <span className='md:text-[20px] text-[17px] mt-5 text-justify tracking-tighter'>
           <Typewriter
             options={{
               strings: [
@@ -44,7 +47,8 @@ const AboutPage = () => {
               delay: 65
             }}
           />
-        </p>
+        </span>
+
         <div className='py-10 flex flex-col'>
           <motion.h3
             initial={{ opacity: 0, scale: 0.5 }}
@@ -58,6 +62,7 @@ const AboutPage = () => {
           >
             My Skills
           </motion.h3>
+        
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -68,9 +73,7 @@ const AboutPage = () => {
               <div className='block-container w-20 h-20' key={skill.id}>
                 <div className='btn-back rounded-xl shadow-[5px_0px_30px_#555] dark:shadow-[5px_0px_30px_#a1a]' />
                 <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ delay: 0.9 }}
+                  initial={{ opacity: 1 }}
                 >
                   <div className='btn-front rounded-xl cursor-pointer flex justify-center items-center'>
                     <Image

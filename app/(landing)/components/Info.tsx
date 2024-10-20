@@ -2,13 +2,11 @@
 import {features} from '@/constants'
 import Link from 'next/link';
 import {Highlight} from '@/components/ui/hero-highlight'
-import {motion} from 'framer-motion'
-import { fadeIn } from '@/utils/motion';
 
 const Info = () => {
   return (
     <section className='pt-10'>
-      <div className='relative xs:max-container px-8 mx-2 mt-5 pt-2'>
+      <div className='relative xs:max-container px-8 mx-2 my-14 md:pt-10'>
         <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
           What I do?
         </h1>
@@ -16,7 +14,7 @@ const Info = () => {
           {features.map((feature)=>(
             <span key={feature.id}>{feature.description}</span>
           ))}
-          You can find more information about me in the <Link href='/about'><Highlight>About me</Highlight></Link> section .
+          You can find more information about me in the <Link href='/about'><Highlight className='z-50 md:z-10'>About me</Highlight></Link> section .
         </p>
       </div>
     </section>

@@ -22,7 +22,7 @@ const BackgroundPlayer:React.FC = () => {
         }
     }
     return(
-        <div className='fixed bottom-2 left-2'>
+        <div className='fixed bottom-2 left-2 z-50'>
         <img
           src={isPlaying ? '/soundoff.png' : '/soundon.png'}
           alt='jukebox'

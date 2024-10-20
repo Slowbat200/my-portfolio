@@ -1,16 +1,16 @@
+import { MobileNavbar } from '@/components/mobile-navbar';
 import { Navbar } from '@/components/navbar';
-import Sidebar from '@/components/sidebar';
 
-
-
-const LandingLayout = async ({children}: {children: React.ReactNode}) => {
+const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='h-full'>
-      <Navbar />
-      <div className='hidden md:flex mt-16 w-20 flex-col fixed inset-y-0'>
-        <Sidebar />
+      <div className='hidden md:flex'>
+        <Navbar />
       </div>
-      <main className='md:pl-20 pt-16 h-full'>{children}</main>
+      <div className='flex md:hidden'>
+        <MobileNavbar />
+      </div>
+      <main className=' h-full'>{children}</main>
     </div>
   );
 };

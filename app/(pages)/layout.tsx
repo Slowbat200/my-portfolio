@@ -1,12 +1,19 @@
+
+
+import { MobileNavbar } from '@/components/mobile-navbar';
 import { Navbar } from '@/components/navbar';
-import Sidebar from '@/components/sidebar';
+
 
 const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='h-full' suppressHydrationWarning>
-      <Navbar />
-      <div className='hidden md:flex mt-16 w-20 flex-col fixed inset-y-0'>
-        <Sidebar />
+    <div className='h-full'>
+      <div className='hidden md:flex'>
+        {' '}
+        <Navbar />
+      </div>
+      <div className='flex md:hidden'>
+        {' '}
+        <MobileNavbar />
       </div>
       <main className='md:pl-20 pt-16 h-full'>{children}</main>
     </div>

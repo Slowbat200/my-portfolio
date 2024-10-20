@@ -1,11 +1,9 @@
 import {
-  contact,
   css,
-  git,
   github,
+  git,
   html,
   javascript,
-  linkedin,
   mongodb,
   shadcn,
   nextjs,
@@ -109,26 +107,11 @@ export const skills = [
   },
 ];
 
-export const socialLinks = [
-  {
-    name: 'Contact',
-    iconUrl: contact,
-    link: '/contact',
-  },
-  {
-    name: 'GitHub',
-    iconUrl: github,
-    link: 'https://github.com/Slowbat200',
-  },
-  {
-    name: 'LinkedIn',
-    iconUrl: linkedin,
-    link: 'https://www.linkedin.com/in/jakub-pavlovic-33b765285/',
-  },
-];
+
 
 export const projects = [
   {
+    id: 0,
     theme: 'btn-back-red',
     icon: Wdt,
     name: 'Web development tutorial',
@@ -138,14 +121,16 @@ export const projects = [
     link: 'https://webdevcourse.vercel.app',
   },
   {
+    id: 1,
     theme: 'btn-back-green',
     icon: WaveWhisper,
-    name: 'Full Stack WaveWhisper',
+    name: 'WaveWhisper',
     description:
-      'Created a full-stack music player aplication "WaveWhisper," enabling users to listen their favourite music with modern design and features.',
+      'WaveWhisper is a full-stack music player application designed to provide users with a modern and feature-rich platform to listen to their favorite music. The application is built using Next.js for server-side rendering, Tailwind CSS for styling, TypeScript for type safety, and Supabase for database management, ensuring a seamless and engaging user experience. ',
     link: 'https://github.com/Slowbat200/waveWhisper',
   },
   {
+    id: 2,
     theme: 'btn-back-yellow',
     icon: AIChatBot,
     name: 'AI Chat Bot',
@@ -154,6 +139,7 @@ export const projects = [
     link: 'https://github.com/Slowbat200/ai-companion',
   },
   {
+    id: 3,
     theme: 'btn-back-orange',
     icon: ApexIntel,
     name: 'AI Sass library',

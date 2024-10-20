@@ -1,5 +1,18 @@
 'use client';
 
+import React, { useRef, useState } from 'react';
+
+import { Press_Start_2P } from 'next/font/google';
+import { useRouter } from 'next/navigation';
+
+import { cn } from '@/lib/utils';
+
+import { useForm } from 'react-hook-form';
+
+import emailjs from '@emailjs/browser';
+
+import toast from 'react-hot-toast';
+
 import {
   Form,
   FormField,
@@ -8,22 +21,13 @@ import {
   FormLabel,
   FormDescription,
 } from '@/components/ui/form';
-import { useForm } from 'react-hook-form';
 import { Input } from '@/components/ui/input';
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { Textarea } from '@/components/ui/textarea';
-import toast from 'react-hot-toast';
-import { useRouter } from 'next/navigation';
-import { Press_Start_2P } from 'next/font/google';
-import { cn } from '@/lib/utils';
-
-
 
 const font = Press_Start_2P({
   weight: '400',
   subsets: ['latin'],
-})
+});
 
 const ContactPage = () => {
   const Useform = useForm();
@@ -48,10 +52,10 @@ const ContactPage = () => {
           from_name: form.name,
           to_name: 'Slowbat',
           from_email: form.email,
-          to_email: 'slowbat@seznam.cz',
+          to_email: 'jakubpavlovic248@seznam.cz',
           message: form.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '',
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
       )
       .then(() => {
         setIsLoading(false);
@@ -70,13 +74,15 @@ const ContactPage = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
-      <div className='flex-1 min-w-[50%] flex flex-col'>
-        <h1>Get in touch</h1>
+      <div className='flex-1 min-w-[50%] flex flex-col pt-10'>
+        <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold'>
+          Get <span className='blue-gradient_text drop-shadow'>in touch</span>
+        </h1>
         <Form {...Useform}>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='space-y-8 pb-10 flex flex-col'
+            className='space-y-8 py-10 flex flex-col'
           >
             <FormField
               name='name'
@@ -85,7 +91,7 @@ const ContactPage = () => {
                   <FormLabel>Name</FormLabel>
                   <FormControl {...field}>
                     <Input
-                      placeholder='John'
+                      placeholder='John Doe'
                       required
                       onChange={handleChange}
                     />
@@ -101,7 +107,7 @@ const ContactPage = () => {
                   <FormLabel>Email</FormLabel>
                   <FormControl {...field}>
                     <Input
-                      placeholder='John@gmail.com'
+                      placeholder='JohnDoe@mail.com'
                       required
                       value={form.email}
                       onChange={handleChange}
@@ -133,7 +139,10 @@ const ContactPage = () => {
             <button
               disabled={isLoading}
               type='submit'
-              className={cn('bg-blue-500 text-white py-2 px-4 md:w-fit rounded text-sm', font.className)}
+              className={cn(
+                'bg-blue-500 text-white py-2 px-4 md:w-fit rounded text-sm',
+                font.className
+              )}
             >
               {isLoading ? 'Sending ...' : 'Send Message'}
             </button>
