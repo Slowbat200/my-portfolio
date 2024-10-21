@@ -7,7 +7,7 @@ const Blob = () => {
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 500 500'
-        width='450px'
+        width='350px'
         id='blobSvg'
         style={{ opacity: 1 }}
         filter='blur(0px)'
