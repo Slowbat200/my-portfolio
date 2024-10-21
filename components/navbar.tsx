@@ -1,5 +1,6 @@
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import { ModeToggle } from './mode-toggle';
 
 export const Navbar = ({ className }: { className?: string }) => {
   return (
@@ -22,6 +23,7 @@ export const Navbar = ({ className }: { className?: string }) => {
         <Link href='/contact'>
           <span>Contact Me</span>
         </Link>
+      <ModeToggle />
       </div>
     </nav>
   );

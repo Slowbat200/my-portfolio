@@ -64,7 +64,9 @@ export default function Home() {
               </Hint>
             </div>
           </div>
-          <Blob />
+          <div className='z-50'>
+            <Blob />
+          </div>
         </div>
         {/** Button section with animation */}
         <section id='button'>
