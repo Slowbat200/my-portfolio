@@ -54,7 +54,7 @@ const HireMe = () => {
           <AccordionItem value='item-4'>
             <AccordionTrigger>Never gonna make you cry.</AccordionTrigger>
             <AccordionContent>
-              I&apos;m a calm person who can make fun of anything, even myself.
+              I&apos;m a calm person who can make fun of anything.
               That&apos;s why even if the atmosphere in the workplace is rough,
               I&apos;ll be the one trying to calm it down.
             </AccordionContent>
