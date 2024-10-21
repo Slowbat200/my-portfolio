@@ -64,7 +64,7 @@ export default function Home() {
               </Hint>
             </div>
           </div>
-          <div className='z-50'>
+          <div className='z-10'>
             <Blob />
           </div>
         </div>
