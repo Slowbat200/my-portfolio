@@ -31,7 +31,7 @@ export function MobileNavbar() {
     },
   ];
   return (
-    <div className='fixed bottom-5 right-5 flex items-center justify-end h-fit w-full z-50'>
+    <div className='fixed bottom-5 right-5 flex items-center justify-end h-fit z-50'>
       <FloatingDock items={links} />
     </div>
   );

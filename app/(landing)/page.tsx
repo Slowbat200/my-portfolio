@@ -2,12 +2,13 @@
 
 import { ArrowBigDownIcon } from 'lucide-react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { useEffect, useState } from 'react';
 
 import HireMe from './components/hire';
 import Info from './components/Info';
 
 import Blob from '@/components/Blob';
-import CTA from '@/components/cta';
+import { CTA } from '@/components/cta';
 import { FlipWords } from '@/components/flip-words';
 
 import { BackgroundBeams } from '@/components/ui/background-beams';
@@ -16,10 +17,27 @@ import { Separator } from '@/components/ui/separator';
 
 import Link from 'next/link';
 import { Hint } from '@/components/hint';
+import { FireLoader } from '@/components/loader';
 
 const words = [`I'm Fullstack developer`, `I'm web developer`];
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading for demonstration
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000); // Remove this in production
+  }, []);
+
+  // Hide overflow when loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [loading]);
+
   const handleScroll = () => {
     // Find the next section by its ID or class
     const nextSection = document.getElementById('next-section');
@@ -29,8 +47,14 @@ export default function Home() {
       nextSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <main className='w-full h-full relative'>
+      {loading && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
+          <FireLoader loading={loading} size={50} />
+        </div>
+      )}
       <section className='flex flex-col items-center justify-between md:p-24 p-0 dark:bg-black bg-white'>
         <div className='items-center justify-between font-mono text-sm lg:flex'>
           <div className='flex flex-col'>
@@ -70,7 +94,7 @@ export default function Home() {
         </div>
         {/** Button section with animation */}
         <section id='button'>
-          <div className='md:mt-[8em] relative z-50 md:z-10 lg:mx-[8em] ml-0 md:my-[3em] md:landscape:right-[5rem] landscape:left-[0rem]'>
+          <div className='md:mt-[8em] my-10 relative  md:z-10 lg:mx-[8em] ml-0 md:my-[3em] md:landscape:right-[5rem] landscape:left-[0rem]'>
             <Button variant='section' onClick={handleScroll}>
               <ArrowBigDownIcon size={30} />
             </Button>

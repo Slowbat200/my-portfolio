@@ -21,7 +21,7 @@ const HireMe = () => {
         Ofcourse you can because I follow a couple of principles, namely:{' '}
       </p>
       <div className='pt-8 leading-8 flex justify-center items-center'>
-        <Accordion type='single' collapsible className='w-full z-40 md:z-0'>
+        <Accordion type='single' collapsible className='w-full'>
           <AccordionItem value='item-1'>
             <AccordionTrigger>
               I&apos;ll never gonna give you up.

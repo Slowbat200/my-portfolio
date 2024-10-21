@@ -1,5 +1,4 @@
-import CTA from '@/components/cta';
-import { Button } from '@/components/ui/button';
+import {CTA} from '@/components/cta';
 import {
   Card,
   CardHeader,

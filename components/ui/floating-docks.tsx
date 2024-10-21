@@ -15,6 +15,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import { FireLoader } from "../loader";
 
 export const FloatingDock = ({
   items,
@@ -39,8 +40,24 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleLinkLoader = () => {
+    setLoading(true);
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      setLoading(false);
+      document.body.style.overflow = '';
+    }, 2000);
+  };
+
   return (
     <div className={cn("relative block md:hidden", className)}>
+      {loading && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[999999]'>
+          <FireLoader loading={loading} size={50} />
+        </div>
+      )}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -66,7 +83,7 @@ const FloatingDockMobile = ({
               >
                 <Link
                   href={item.href}
-                  key={item.title}
+                  onClick={handleLinkLoader}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
                 >
                   <div>{item.icon}</div>

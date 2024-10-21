@@ -5,7 +5,6 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import AlternateTimeline from './components/timeline';
 import { useEffect, useState } from 'react';
-import { MobileNavbar } from '@/components/mobile-navbar';
 
 const AboutPage = () => {
   const [isMounted, setIsMounted] = useState(false);
