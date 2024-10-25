@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 import HireMe from './components/hire';
 import Info from './components/Info';
+import { Footer } from './components/footer';
 
 import Blob from '@/components/Blob';
 import { CTA } from '@/components/cta';
@@ -120,6 +121,9 @@ export default function Home() {
           <div className='gradient-03 absolute w-[10%] h-[10%] inset-0' />
         </div>
       </section>
+      <div>
+        <Footer />
+      </div>
     </main>
   );
 }

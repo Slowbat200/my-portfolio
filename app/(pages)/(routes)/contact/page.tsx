@@ -52,7 +52,7 @@ const ContactPage = () => {
           from_name: form.name,
           to_name: 'Slowbat',
           from_email: form.email,
-          to_email: 'jakubpavlovic248@seznam.cz',
+          to_email: 'slowbat@seznam.cz',
           message: form.message,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''

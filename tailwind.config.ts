@@ -24,6 +24,7 @@ const config = {
     },
     extend: {
       colors: {
+        neon_green: '#39FF14',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -85,6 +86,9 @@ const config = {
           '0 0 15px rgba(255, 69, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.7), 0 0 40px rgba(255, 69, 0, 1)',
         'neon-inset':
           'inset 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(57, 255, 20, 0.7)',
+      },
+      textShadow: {
+        neon: '0 0 5px #39FF14, 0 0 10px #39FF14',
       },
     },
   },

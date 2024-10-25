@@ -33,7 +33,7 @@ const Info = () => {
           ))}
           You can find more information about me in the{' '}
           <Link href='/about' onClick={handleInfoLoader}>
-            <Highlight className='z-50'>About me</Highlight>
+            <Highlight className='z-40'>About me</Highlight>
           </Link>{' '}
           section .
         </p>
