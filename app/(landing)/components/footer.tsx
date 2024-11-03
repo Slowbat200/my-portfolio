@@ -53,7 +53,7 @@ export const Footer = () => {
           </ul>
         </div>
         {/* Social Media Icons */}
-        <div className='text-xl text-gray-300'>
+        <div>
           <h3 className='text-xl font-semibold neon-text text-center '>Social Links</h3>
           <div className='flex justify-center items-center col-span-2 space-x-3.5 mt-4'>
             <Hint label='Instagram' side='bottom'>
