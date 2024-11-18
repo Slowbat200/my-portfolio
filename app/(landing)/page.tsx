@@ -67,21 +67,21 @@ export default function Home() {
             </span>
             <div className='flex flex-row gap-3.5 pt-5 justify-center items-center z-10'>
               <Hint label='Instagram' side='bottom'>
-                <Button variant='link'>
+                <Button variant='link' className='bg-black z-50 dark:bg-transparent'>
                   <Link href='https://www.instagram.com/slowbat201/'>
                     <FaInstagram size={34} />
                   </Link>
                 </Button>
               </Hint>
               <Hint label='Github' side='bottom'>
-                <Button variant='link' className='z-50'>
+                <Button variant='link' className='z-50 bg-black dark:bg-transparent'>
                   <Link href='https://github.com/Slowbat200'>
                     <FaGithub size={34} />
                   </Link>
                 </Button>
               </Hint>
               <Hint label='Linkedin' side='bottom'>
-                <Button variant='link' className='z-50'>
+                <Button variant='link' className='z-50 bg-black dark:bg-transparent'>
                   <Link href='https://www.linkedin.com/in/jakub-pavlovic-33b765285/'>
                     <FaLinkedin size={34} />
                   </Link>
@@ -89,7 +89,7 @@ export default function Home() {
               </Hint>
             </div>
           </div>
-          <div className='z-10'>
+          <div className='z-10 md:w-[400px] md:h-[400px] h-[350px] w-[350px]'>
             <Blob />
           </div>
         </div>

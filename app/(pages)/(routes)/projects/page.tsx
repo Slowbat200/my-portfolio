@@ -1,4 +1,7 @@
+'use client'
+
 import {CTA} from '@/components/cta';
+import { Button } from '@/components/ui/button';
 import {
   Card,
   CardHeader,
@@ -11,8 +14,10 @@ import { projects } from '@/constants';
 import { arrow } from '@/public';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const ProjectPage = () => {
+  const router = useRouter()
   return (
     <section className='max-container'>
       <h1 className='head-text'>
@@ -22,10 +27,13 @@ const ProjectPage = () => {
         </span>
       </h1>
       <div className='mt-5 flex flex-col gap-3 dark:text-slate-200 text-neutral-800'>
-        I have built many websites since 2021, but the ones I am currently
-        developing are some of my biggest websites. Whether it&apos;s this
-        portfolio, a web music player, or a web tutorial for budding web
-        developers.
+       <p>
+          I have built many websites since 2021, but the ones I am currently
+          developing are some of my biggest websites. Whether it&apos;s this
+          portfolio, a web music player, or a web tutorial for budding web
+          developers. Here you can see all my projects that I haven't mentioned here.
+        <Button className='ml-5' onClick={() => router.push('https://github.com/Slowbat200')}>Learn more</Button>
+       </p>
       </div>
 
       <div className='flex  flex-wrap my-20 gap-16'>
