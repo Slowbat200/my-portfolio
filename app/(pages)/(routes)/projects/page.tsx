@@ -31,7 +31,7 @@ const ProjectPage = () => {
           I have built many websites since 2021, but the ones I am currently
           developing are some of my biggest websites. Whether it&apos;s this
           portfolio, a web music player, or a web tutorial for budding web
-          developers. Here you can see all my projects that I haven't mentioned here.
+          developers. Here you can see all my projects that I haven&apos;t mentioned here.
         <Button className='ml-5' onClick={() => router.push('https://github.com/Slowbat200')}>Learn more</Button>
        </p>
       </div>
