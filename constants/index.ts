@@ -25,89 +25,104 @@ export const skills = [
     image: html,
     name: 'HTML',
     type: 'Frontend',
+    description: 'I have a four years of experience with HTML.',
   },
   {
     id: 1,
     image: css,
     name: 'CSS',
     type: 'Frontend',
+    description: `I have a four years of experience with CSS. I'm familiar with preprocessor SCSS and with framework TailwindCss`,
   },
   {
     id: 2,
     image: javascript,
     name: 'JavaScript',
     type: 'Frontend',
+    description: `I have a four years of experience with JavaScript. I'm familiar with labrary React and with React framework Next.js`,
   },
   {
     id: 3,
     image: git,
     name: 'Git',
     type: 'Version Control',
+    description: `
+    I have a four years of experience with Git. I'm familiar with all the basic commands and I know how to use GitHub.`,
   },
   {
     id: 4,
     image: github,
     name: 'GitHub',
     type: 'Version Control',
+    description: `Im storing my projects in Github.`,
   },
   {
     id: 5,
     image: mongodb,
     name: 'MongoDB',
     type: 'Database',
+    description: `I build a project with MongoDB.`,
   },
   {
     id: 6,
     image: supabase,
     name: 'Supabase',
     type: 'Database',
+    description: `I build a project with Supabase.`,
   },
   {
     id: 7,
     image: sql,
     name: 'SQL',
     type: 'Database',
+    description: `I have a four years of experience with SQL. I'm familiar with all the
+    basic commands and I know how to use PostgreSQL.
+    `,
   },
   {
     id: 8,
     image: shadcn,
     name: 'Shadcn-UI',
     type: 'Frontend',
+    description: `For a UI components Im using Shadcn-UI.`,
   },
   {
     id: 10,
     image: react,
     name: 'React',
     type: 'Frontend',
+    description: 'I know React very well.'
   },
 
   {
     id: 12,
     image: sass,
-    name: 'Sass',
+    name: 'Scss',
     type: 'Frontend',
+    description: 'I know how to use Scss.'
   },
   {
     id: 13,
     image: nextjs,
     name: 'Next.js',
     type: 'Frontend',
+    description: `I know how to use Next.js.`
   },
   {
     id: 14,
     image: tailwindcss,
     name: 'Tailwind CSS',
     type: 'Frontend',
+    description: `I know how to use Tailwind CSS.`
   },
   {
     id: 15,
     image: typescript,
     name: 'TypeScript',
     type: 'Frontend',
+    description: `I know how to use TypeScript.`
   },
 ];
-
-
 
 export const projects = [
   {
@@ -134,8 +149,7 @@ export const projects = [
     theme: 'btn-back-yellow',
     icon: AIChatBot,
     name: 'AI Chat Bot',
-    description:
-      `App where you can create your own character, give him/her 'personality' and communicate with each other`,
+    description: `App where you can create your own character, give him/her 'personality' and communicate with each other`,
     link: 'https://github.com/Slowbat200/ai-companion',
   },
   {

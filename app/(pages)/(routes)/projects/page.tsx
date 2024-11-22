@@ -18,6 +18,7 @@ import { useRouter } from 'next/navigation';
 
 const ProjectPage = () => {
   const router = useRouter()
+
   return (
     <section className='max-container'>
       <h1 className='head-text'>
@@ -42,11 +43,11 @@ const ProjectPage = () => {
             <CardHeader className={`btn-back rounded-xl ${project.theme}`}>
               <div className='block-container w-12 h-12'>
                 <CardTitle className='btn-front rounded-xl flex justify-center items-center'>
-                  <Image
-                    src={project.icon}
-                    alt='Project Icon'
-                    className='w-8 h-8 object-contain rounded'
-                  />
+                    <Image
+                      src={project.icon}
+                      alt='Project Icon'
+                      className='w-8 h-8 object-contain rounded'
+                    />
                 </CardTitle>
               </div>
               <CardDescription>{project.name}</CardDescription>
