@@ -1,5 +1,3 @@
-
-
 import { MobileNavbar } from '@/components/mobile-navbar';
 import { Navbar } from '@/components/navbar';
 

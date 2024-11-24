@@ -120,7 +120,7 @@ export const skills = [
     image: typescript,
     name: 'TypeScript',
     type: 'Frontend',
-    description: `I know how to use TypeScript.`
+    description: `I know how to use TypeScript.`  
   },
 ];
 

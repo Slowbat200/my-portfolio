@@ -5,6 +5,8 @@ import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import AlternateTimeline from './components/timeline';
 import { useEffect, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 // Define the interface for the skill
 interface Skill {
@@ -18,16 +20,24 @@ interface Skill {
 interface ModalProps {
   skill: Skill | null;
   onClose: () => void;
+  onNext: () => void;
+  onPrevious: () => void;
 }
 
-const Modal = ({ skill, onClose }: ModalProps) => {
+const Modal = ({ skill, onClose, onNext, onPrevious }: ModalProps) => {
   if (!skill) return null;
 
   return (
-    <div className='dark:bg-black bg-gray-800 text-white fixed inset-0 flex justify-center items-center z-50' onClick={onClose}>
-      <div className='flex flex-col justify-center items-center gap-y-5' onClick={(e) => e.stopPropagation()}>
+    <div
+      className='dark:bg-black bg-gray-800 text-white fixed inset-0 flex justify-center items-center z-50'
+      onClick={onClose}
+    >
+      <div
+        className='flex flex-col justify-center items-center gap-y-5 border px-5 py-5 w-[57.3em] h-fit rounded-lg bg-neutral-200 text-black'
+        onClick={(e) => e.stopPropagation()}
+      >
         <span
-          className='text-3xl cursor-pointer absolute top-5 right-5'
+          className='text-3xl cursor-pointer absolute top-5 right-5 text-white'
           onClick={onClose}
         >
           &times;
@@ -39,6 +49,14 @@ const Modal = ({ skill, onClose }: ModalProps) => {
           alt={skill.name}
           className='w-40 h-40 object-contain'
         />
+        <div className='flex justify-between w-full mt-4'>
+          <Button variant='ghost' onClick={onPrevious}>
+            <ArrowLeft size={20} className='mr-2' /> Previous
+          </Button>
+          <Button variant='ghost' onClick={onNext}>
+            Next <ArrowRight size={20} className='ml-2' />
+          </Button>
+        </div>
       </div>
     </div>
   );
@@ -46,7 +64,7 @@ const Modal = ({ skill, onClose }: ModalProps) => {
 
 const AboutPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -61,6 +79,27 @@ const AboutPage = () => {
   const onCloseModal = () => {
     setSelectedSkill(null);
     setIsModalOpen(false);
+  };
+  const skillsLength = skills.length; // Get the total number of skills
+
+  const onNext = () => {
+    if (selectedSkill) {
+      const currentIndex = skills.findIndex(
+        (skill) => skill.id === selectedSkill.id
+      );
+      const nextIndex = (currentIndex + 1) % skills.length; // Loop back to the first skill
+      setSelectedSkill(skills[nextIndex]);
+    }
+  };
+
+  const onPrevious = () => {
+    if (selectedSkill) {
+      const currentIndex = skills.findIndex(
+        (skill) => skill.id === selectedSkill.id
+      );
+      const previousIndex = (currentIndex - 1 + skillsLength) % skills.length; // Loop back to the last skill
+      setSelectedSkill(skills[previousIndex]);
+    }
   };
 
   if (!isMounted) return null;
@@ -138,7 +177,12 @@ const AboutPage = () => {
             ))}
           </motion.div>
           {isModalOpen && (
-            <Modal skill={selectedSkill} onClose={onCloseModal} />
+            <Modal
+              skill={selectedSkill}
+              onClose={onCloseModal}
+              onNext={onNext}
+              onPrevious={onPrevious}
+            />
           )}
         </div>
         <div>
