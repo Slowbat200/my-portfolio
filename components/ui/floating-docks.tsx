@@ -48,6 +48,7 @@ const FloatingDockMobile = ({
     setTimeout(() => {
       setLoading(false);
       document.body.style.overflow = '';
+      setOpen(false)
     }, 2000);
   };
 

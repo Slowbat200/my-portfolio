@@ -1,9 +1,11 @@
 import React from 'react';
+
 import { FloatingDock } from './ui/floating-docks';
+
+import EmailIcon from '@mui/icons-material/Email';
+import FolderIcon from '@mui/icons-material/Folder';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
-import FolderIcon from '@mui/icons-material/Folder';
-import EmailIcon from '@mui/icons-material/Email';
 export function MobileNavbar() {
   const links = [
     {

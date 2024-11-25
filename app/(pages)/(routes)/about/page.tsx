@@ -1,11 +1,17 @@
 'use client';
-import { skills } from '@/constants';
-import Image from 'next/image';
-import Typewriter from 'typewriter-effect';
-import { motion } from 'framer-motion';
-import AlternateTimeline from './components/timeline';
-import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
+
+import AlternateTimeline from './components/timeline';
+
+import { skills } from '@/constants';
+
+import Image from 'next/image';
+
+import { motion } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
+
+import { useEffect, useState } from 'react';
+
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 // Define the interface for the skill
@@ -42,13 +48,16 @@ const Modal = ({ skill, onClose, onNext, onPrevious }: ModalProps) => {
         >
           &times;
         </span>
-        <h2>{skill.name}</h2>
-        <p>{skill.description}</p>
-        <Image
-          src={skill.image}
-          alt={skill.name}
-          className='w-40 h-40 object-contain'
-        />
+        <h2 className='scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0'>{skill.name}</h2>
+       <div className='flex flex-col-reverse md:flex-row-reverse gap-x-10 justify-center items-center'>
+          <p>{skill.description}</p>
+          <div className='md:w-px md:h-40 h-px w-40 bg-black md:mx-4 my-4'/> {/* Vertical separator */}
+          <Image
+            src={skill.image}
+            alt={skill.name}
+            className='w-40 h-40 object-contain'
+          />
+       </div>
         <div className='flex justify-between w-full mt-4'>
           <Button variant='ghost' onClick={onPrevious}>
             <ArrowLeft size={20} className='mr-2' /> Previous
@@ -106,7 +115,7 @@ const AboutPage = () => {
   return (
     <section className='max-container relative'>
       <motion.h1
-        className='text-center sm:text-5xl text-3xl sm:leading-snug'
+        className='text-center sm:text-5xl text-3xl sm:leading-snug pt-10'
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
