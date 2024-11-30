@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 import BackgroundPlayer from '@/components/audio-player';
+import { ConvexClientProvider } from '@/components/convex-provider';
+import { ConvexAuthNextjsServerProvider } from '@convex-dev/auth/nextjs/server';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,15 +19,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ConvexAuthNextjsServerProvider>
       <html lang='en' suppressHydrationWarning>
         <body className={inter.className}>
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-            {children}
-          </ThemeProvider>
+          <ConvexClientProvider>
+            <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+              {children}
+            </ThemeProvider>
+          </ConvexClientProvider>
           <div>
-          <BackgroundPlayer />
-        </div>
+            <BackgroundPlayer />
+          </div>
+          <p></p>
         </body>
       </html>
+    </ConvexAuthNextjsServerProvider>
   );
 }
