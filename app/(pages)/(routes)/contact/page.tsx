@@ -24,6 +24,8 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
+import { motion } from 'framer-motion';
+
 const font = Press_Start_2P({
   weight: '400',
   subsets: ['latin'],
@@ -74,7 +76,12 @@ const ContactPage = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
-      <div className='flex-1 min-w-[50%] flex flex-col pt-10'>
+      <motion.div
+        className='flex-1 min-w-[50%] flex flex-col pt-10'
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold'>
           Get <span className='blue-gradient_text drop-shadow'>in touch</span>
         </h1>
@@ -140,7 +147,7 @@ const ContactPage = () => {
               disabled={isLoading}
               type='submit'
               className={cn(
-                'bg-blue-500 text-white py-2 px-4 md:w-fit rounded text-sm',
+                'btn hover:scale-110 transition text-white py-2 px-4 md:w-fit rounded text-sm',
                 font.className
               )}
             >
@@ -148,7 +155,7 @@ const ContactPage = () => {
             </button>
           </form>
         </Form>
-      </div>
+      </motion.div>
     </section>
   );
 };

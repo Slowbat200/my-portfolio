@@ -8,10 +8,17 @@ import { Hint } from '@/components/hint';
 import { FaInstagram, FaGithub, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { Separator } from '@/components/ui/separator';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { footerVariants } from '@/utils/motion';
 
 export const Footer = () => {
   return (
-    <footer className='bg-gray-900 text-white py-10 px-5 md:px-10'>
+    <motion.footer
+      variants={footerVariants}
+      initial="hidden"
+      animate="show"
+      className='bg-gray-900 text-white py-10 px-5 md:px-10'
+    >
       <div className='container mx-auto mb-10 grid grid-cols-1 md:grid-cols-3 gap-8'>
         {/* Logo or Brand Name */}
         <div className='text-center md:text-left'>
@@ -93,6 +100,6 @@ export const Footer = () => {
       <div className='mt-8 text-center text-gray-500'>
         <p>Coded with &#x2764;&#xfe0f; by Slowbat</p>
       </div>
-    </footer>
+    </motion.footer>
   );
 };

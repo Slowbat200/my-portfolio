@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Timeline } from '@/components/ui/timeline';
+import { motion } from 'framer-motion';
 
 export default function AlternateTimeline() {
   const data = [
@@ -12,10 +13,10 @@ export default function AlternateTimeline() {
           <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
             Currently working on my biggest project of all time. Its gonna be a
             website with courses about Web Development, which includes basic web
-            languages and their libraries and frameworks. I&apos;d like to make the
-            courses more fun than they are on other platforms. Which means there
-            will be more practice than theory, there will be quizzes and a lot
-            of other fun content.
+            languages and their libraries and frameworks. I&apos;d like to make
+            the courses more fun than they are on other platforms. Which means
+            there will be more practice than theory, there will be quizzes and a
+            lot of other fun content.
           </p>
         </div>
       ),
@@ -25,7 +26,7 @@ export default function AlternateTimeline() {
       content: (
         <div>
           <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
-          After I end up in the school I started learning by my own and
+            After I end up in the school I started learning by my own and
             started exploring, for me, new technologies. I began learning,
             modern technologies such as React, Next.js, TailwindCSS or MongoDB.
           </p>
@@ -36,8 +37,8 @@ export default function AlternateTimeline() {
       title: 'Late 2022 and Early 2023',
       content: (
         <div>
-          <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
-          In summer 2022 I started working on my graduation project. It was
+          <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal'>
+            In summer 2022 I started working on my graduation project. It was
             first version of Web Development courses. It was developed only with
             HTML, CSS and JavaScript.
           </p>
@@ -53,7 +54,7 @@ export default function AlternateTimeline() {
       content: (
         <div>
           <p className='text-neutral-800 dark:text-neutral-200 text-xs lg:text-[17px] leading-6 font-normal mb-8'>
-          This was the year I first started learning about web development,
+            This was the year I first started learning about web development,
             this is where my journey as a web developer began. Since then I have
             created many projects and learned many new things that I still use
             today
@@ -64,7 +65,18 @@ export default function AlternateTimeline() {
   ];
   return (
     <div className='w-full'>
-      <Timeline data={data} />
+      <Timeline data={data.map((item) => ({
+        ...item,
+        content: (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {item.content}
+          </motion.div>
+        ),
+      }))} />
     </div>
   );
 }

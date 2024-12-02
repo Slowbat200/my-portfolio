@@ -3,6 +3,7 @@
 import { ArrowBigDownIcon } from 'lucide-react';
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 import HireMe from './components/hire';
 import Info from './components/Info';
@@ -57,7 +58,12 @@ export default function Home() {
         </div>
       )}
       <section className='flex flex-col items-center justify-between md:p-24 p-0 dark:bg-black bg-white'>
-        <div className='items-center justify-between font-mono text-sm lg:flex'>
+        <motion.div 
+          className='items-center justify-between font-mono text-sm lg:flex'
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <div className='flex flex-col'>
             <h1 className='text-[25px] text-center md:text-5xl lg:text-6xl font-bold pl-5 lg:pl-10 lg:pb-3 pt-10'>
               Hello I&apos;m Slowbat
@@ -92,7 +98,7 @@ export default function Home() {
           <div className='z-10 md:w-[400px] md:h-[400px] h-[350px] w-[350px]'>
             <Blob />
           </div>
-        </div>
+        </motion.div>
         {/** Button section with animation */}
         <section id='button'>
           <div className='md:mt-[8em] my-10 relative  md:z-10 lg:mx-[8em] ml-0 md:my-[3em] md:landscape:right-[5rem] landscape:left-[0rem]'>

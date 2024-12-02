@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { ModeToggle } from './mode-toggle';
 import { FireLoader } from './loader';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { staggerContainer } from '@/utils/motion';
 
 type Props = {
   className?: string;
@@ -23,7 +25,11 @@ export const Navbar = ({ className }: Props) => {
   };
 
   return (
-    <nav
+    <motion.nav
+     initial={{opacity: 0}}
+     whileInView={{opacity: 1}}
+     viewport={{once: true}}
+      transition={{ duration: 0.8, delay: 0.3}}
       className={cn(`fixed z-50 top-10 inset-x-0 max-w-4xl mx-auto`, className)}
     >
       {loading && (
@@ -49,6 +55,6 @@ export const Navbar = ({ className }: Props) => {
         </Link>
         <ModeToggle />
       </div>
-    </nav>
+    </motion.nav>
   );
 };

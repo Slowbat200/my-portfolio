@@ -12,6 +12,8 @@ import { cn } from "@/lib/utils";
 
 import { Press_Start_2P } from "next/font/google";
 
+import { motion } from 'framer-motion';
+import { fadeIn } from "@/utils/motion";
 
 const font = Press_Start_2P({
   weight: '400',
@@ -30,7 +32,12 @@ export const CTA = () => {
     }, 2000)
   } 
   return ( 
-        <section className='cta'>
+        <motion.section 
+          className='cta' 
+          variants={fadeIn('up', 'spring', 0.2, 1)}
+          initial="hidden" 
+          whileInView="show"
+        >
           {loading &&(
             <div className="fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]">
               <FireLoader loading={loading} size={50} />
@@ -43,7 +50,7 @@ export const CTA = () => {
         <Button className="btn hover:scale-110 transition ">
         <Link onClick={handleCtaLoader} href='/contact' className={cn(font.className)}>Contact me</Link>
         </Button>
-      </section>
+      </motion.section>
      );
 }
  

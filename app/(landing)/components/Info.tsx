@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Highlight } from '@/components/ui/hero-highlight';
 import { useState } from 'react';
 import { FireLoader } from '@/components/loader'; // Add this import
+import { motion } from 'framer-motion'; // Add this import
 
 const Info = () => {
   const [loading, setLoading] = useState(false);
@@ -24,10 +25,20 @@ const Info = () => {
         </div>
       )}
       <div className='relative xs:max-container px-8 mx-2 my-14 md:pt-10'>
-        <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
+        <motion.h1 
+          className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'
+          initial={{ opacity: 0, y: -20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}
+        >
           What I do?
-        </h1>
-        <p className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter'>
+        </motion.h1>
+        <motion.p 
+          className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter'
+          initial={{ opacity: 0, y: 20 }} 
+          whileInView={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.5 }}
+        >
           {features.map((feature) => (
             <span key={feature.id}>{feature.description}</span>
           ))}
@@ -36,7 +47,7 @@ const Info = () => {
             <Highlight className='z-40'>About me</Highlight>
           </Link>{' '}
           section .
-        </p>
+        </motion.p>
       </div>
     </section>
   );
