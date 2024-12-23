@@ -17,36 +17,37 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { staggerContainer } from '@/utils/motion';
+import { Snowfall } from '@/components/ui/snow-fall';
 const ProjectPage = () => {
   const router = useRouter();
 
   return (
     <section className='max-container'>
+      <Snowfall />
       <motion.h1
         className='head-text'
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        My{' '}
-        <span className='blue-gradient_text font-semibold drop-shadow'>
-          Projects
+        <span className='christmas-gradient_text font-semibold drop-shadow'>
+          My Projects
         </span>
       </motion.h1>
       <motion.div
-        className='mt-5 flex flex-col gap-3 dark:text-slate-200 text-neutral-800'
+        className='mt-5 flex flex-col gap-3'
         variants={staggerContainer(0.1, 0.2)} // Added animation variant
         initial='hidden' // Set initial state
         whileInView='show' // Set state when in view
       >
-        <p>
+        <p className='dark:text-slate-200 text-neutral-200 z-40'>
           I have built many websites since 2021, but the ones I am currently
           developing are some of my biggest websites. Whether it&apos;s this
           portfolio, a web music player, or a web tutorial for budding web
           developers. Here you can see all my projects that I haven&apos;t
           mentioned here.
           <Button
-            className='ml-5'
+            className='ml-5 bg-gradient-to-r from-[#DA1212] to-[#F08C00]'
             onClick={() => router.push('https://github.com/Slowbat200')}
           >
             Learn more
@@ -62,6 +63,7 @@ const ProjectPage = () => {
       >
         {projects.map((project) => (
           <motion.div
+           className='z-40'
             key={project.id}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -80,19 +82,21 @@ const ProjectPage = () => {
                 </div>
                 <CardDescription>{project.name}</CardDescription>
               </CardHeader>
-              <CardContent>{project.description}</CardContent>
+              <CardContent>
+                <p className='text-white z-50'>{project.description}</p>
+              </CardContent>
               <CardFooter className='mt-5 flex items-center gap-2 font-poppins'>
                 {' '}
                 <Link
                   href={project.link}
-                  className='font-semibold text-blue-600'
+                  className='font-semibold text-white z-50'
                 >
                   Live link
                 </Link>
                 <Image
                   src={arrow}
                   alt='arrow'
-                  className='w-4 h-4 object-contain'
+                  className='w-4 h-4 object-contain z-50'
                 />
               </CardFooter>
             </Card>

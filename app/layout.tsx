@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
-import BackgroundPlayer from '@/components/audio-player';
 import { ConvexClientProvider } from '@/components/convex-provider';
 import { ConvexAuthNextjsServerProvider } from '@convex-dev/auth/nextjs/server';
 
@@ -27,9 +26,6 @@ export default function RootLayout({
               {children}
             </ThemeProvider>
           </ConvexClientProvider>
-          <div>
-            <BackgroundPlayer />
-          </div>
           <p></p>
         </body>
       </html>

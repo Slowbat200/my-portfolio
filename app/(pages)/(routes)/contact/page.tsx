@@ -25,6 +25,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 import { motion } from 'framer-motion';
+import { Snowfall } from '@/components/ui/snow-fall';
 
 const font = Press_Start_2P({
   weight: '400',
@@ -76,14 +77,15 @@ const ContactPage = () => {
 
   return (
     <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
+      <Snowfall />
       <motion.div
         className='flex-1 min-w-[50%] flex flex-col pt-10'
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold'>
-          Get <span className='blue-gradient_text drop-shadow'>in touch</span>
+        <h1 className='dark:text-white text-white text-4xl md:text-5xl lg:text-6xl font-semibold'> {/** Text is white because of the snowfall */}
+          Get <span className='christmas-gradient_text drop-shadow'>in touch</span>
         </h1>
         <Form {...Useform}>
           <form

@@ -28,13 +28,15 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
+    //{/** Bg is transparent because of the snowfall */}
     <div
-      className='w-full bg-white dark:bg-neutral-950 font-sans md:px-10'
+      className='w-full bg-transparent font-sans md:px-10' 
       ref={containerRef}
     >
-      <div className='max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10'>
+      <div className='max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10'> 
+        {/** Text is white because of the snowfall */}
         <motion.h2
-          className='text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl'
+          className='text-lg md:text-4xl mb-4 text-white dark:text-white max-w-4xl'
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{
@@ -45,8 +47,9 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         >
           Changelog from my journey
         </motion.h2>
+        {/** Text is white because of the snowfall */}
         <motion.p
-          className='text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm'
+          className='text-neutral-300 dark:text-neutral-300 text-sm md:text-base max-w-sm'
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{

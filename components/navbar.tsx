@@ -6,7 +6,6 @@ import { ModeToggle } from './mode-toggle';
 import { FireLoader } from './loader';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { staggerContainer } from '@/utils/motion';
 
 type Props = {
   className?: string;
@@ -37,21 +36,22 @@ export const Navbar = ({ className }: Props) => {
           <FireLoader loading={loading} size={50} />
         </div>
       )}
-      <div className='flex justify-evenly items-center h-full border border-transparent dark:border-[#00FFFF] shadow-input rounded-full py-5 bg-transparent backdrop-blur-xl'>
+      {/* Colors updated for christmas, the previouse colors for dark border is:00fff  */}
+      <div className='flex justify-evenly items-center h-full border border-t-[#588C73] border-b-[#F2E394] dark:border-t-[#EC255A] dark:border-s-[#FAEDF0] dark:border-b-[#FAEDF0] dark:border-e-[#EC255A] shadow-input rounded-full py-5 bg-transparent backdrop-blur-xl'>
         <div className='pr-[100px]'>
-          <h1 className='text-3xl'>Slowbat</h1>
+          <h1 className='text-3xl text-white'>Slowbat</h1>  {/** Text is white because of the snowfall */}
         </div>
         <Link href='/' onClick={handleLinkLoader}>
-          <span>Home</span>
+          <span className='text-white'>Home</span> {/** Text is white because of the snowfall */}
         </Link>
         <Link href='/about' onClick={handleLinkLoader}>
-          <span>About Me</span>
+          <span className='text-white'>About Me</span> {/** Text is white because of the snowfall */}
         </Link>
         <Link href='/projects' onClick={handleLinkLoader}>
-          <span>My Projects</span>
+          <span className='text-white'>My Projects</span> {/** Text is white because of the snowfall */}
         </Link>
         <Link href='/contact' onClick={handleLinkLoader}>
-          <span>Contact Me</span>
+          <span className='text-white'>Contact Me</span> {/** Text is white because of the snowfall */}
         </Link>
         <ModeToggle />
       </div>

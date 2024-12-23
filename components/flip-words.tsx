@@ -1,7 +1,7 @@
-"use client";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
-import { cn } from "@/utils/cn";
+'use client';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion, LayoutGroup } from 'framer-motion';
+import { cn } from '@/utils/cn';
 
 export const FlipWords = ({
   words,
@@ -45,8 +45,8 @@ export const FlipWords = ({
         }}
         transition={{
           duration: 0.4,
-          ease: "easeInOut",
-          type: "spring",
+          ease: 'easeInOut',
+          type: 'spring',
           stiffness: 100,
           damping: 10,
         }}
@@ -54,26 +54,26 @@ export const FlipWords = ({
           opacity: 0,
           y: -40,
           x: 40,
-          filter: "blur(8px)",
+          filter: 'blur(8px)',
           scale: 2,
-          position: "absolute",
+          position: 'absolute',
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2",
+          'z-10 inline-block relative text-left text-neutral-100 dark:text-neutral-100 px-2',
           className
-        )}
+        )} // Text is white because of the snowfall
         key={currentWord}
       >
-        {currentWord.split("").map((letter, index) => (
+        {currentWord.split('').map((letter, index) => (
           <motion.span
             key={currentWord + index}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            initial={{ opacity: 0, y: 10, filter: 'blur(8px)' }}
+            animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
             transition={{
               delay: index * 0.08,
               duration: 0.4,
             }}
-            className="inline"
+            className='inline'
           >
             {letter}
           </motion.span>

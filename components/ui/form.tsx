@@ -130,10 +130,11 @@ const FormDescription = React.forwardRef<
   const { formDescriptionId } = useFormField()
 
   return (
+    //{/** Text is white because of the snowfall */}
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-sm text-muted-foreground", className)}
+      className={cn("text-sm text-white", className)} 
       {...props}
     />
   )

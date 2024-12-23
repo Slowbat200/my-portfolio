@@ -15,18 +15,17 @@ export const Footer = () => {
   return (
     <motion.footer
       variants={footerVariants}
-      initial="hidden"
-      animate="show"
+      initial='hidden'
+      animate='show'
       className='bg-gray-900 text-white py-10 px-5 md:px-10'
     >
       <div className='container mx-auto mb-10 grid grid-cols-1 md:grid-cols-3 gap-8'>
         {/* Logo or Brand Name */}
         <div className='text-center md:text-left'>
           <h1 className='text-3xl font-bold neon-text'>Slowbat</h1>
-          <p className='mt-2 text-sm text-gray-400'>
-            Delivering exceptional experiences through innovative design and
-            cutting-edge development.
-          </p>
+            <p className='mt-2 text-sm text-gray-400'>
+            Marry Christmas and happy new year to everyone. &#127876;&#127873;
+            </p>
         </div>
 
         {/* Navigation Links */}
@@ -61,7 +60,9 @@ export const Footer = () => {
         </div>
         {/* Social Media Icons */}
         <div>
-          <h3 className='text-xl font-semibold neon-text text-center '>Social Links</h3>
+          <h3 className='text-xl font-semibold neon-text text-center '>
+            Social Links
+          </h3>
           <div className='flex justify-center items-center col-span-2 space-x-3.5 mt-4'>
             <Hint label='Instagram' side='bottom'>
               <Button variant='link'>

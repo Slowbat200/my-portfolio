@@ -1,4 +1,4 @@
-import {
+import { 
   Accordion,
   AccordionItem,
   AccordionTrigger,
@@ -7,22 +7,22 @@ import {
 
 const HireMe = () => {
   return (
-    <div className='mt-10'>
-      <h1 className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'>
+    <div className="mt-10 relative z-10">
+      <h1 className="dark:text-white text-white text-4xl md:text-5xl lg:text-6xl font-semibold text-center"> {/** Text is white because of the snowfall */}
         Why you should hire me?
       </h1>
-      <p className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter'>
+      <p className="md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter text-white"> {/** Text is white because of the snowfall */}
         If you decide to hire me, I&apos;ll prove you that I&apos;m best and I
         will provide you with all my skills and knowledge that I have learned in
         the time I have been developing websites.
       </p>
-      <h2 className='text-center text-3xl pt-8'>Can you trust me?</h2>
-      <p className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter'>
-        Ofcourse you can because I follow a couple of principles, namely:{' '}
+      <h2 className="text-center text-3xl pt-8 text-white">Can you trust me?</h2> {/** Text is white because of the snowfall */}
+      <p className="md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter text-white"> {/** Text is white because of the snowfall */}
+        Of course you can because I follow a couple of principles, namely:{' '}
       </p>
-      <div className='pt-8 leading-8 flex justify-center items-center'>
-        <Accordion type='single' collapsible className='w-full'>
-          <AccordionItem value='item-1'>
+      <div className="pt-8 leading-8 flex justify-center items-center text-white"> {/** Text is white because of the snowfall */}
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
             <AccordionTrigger>
               I&apos;ll never gonna give you up.
             </AccordionTrigger>
@@ -31,7 +31,7 @@ const HireMe = () => {
               everything is done.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-2'>
+          <AccordionItem value="item-2">
             <AccordionTrigger>
               I&apos;ll never gonna let you down.
             </AccordionTrigger>
@@ -40,7 +40,7 @@ const HireMe = () => {
               won&apos;t be disappointed.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-3'>
+          <AccordionItem value="item-3">
             <AccordionTrigger>
               I&apos;ll never gonna run around and desert you.
             </AccordionTrigger>
@@ -51,7 +51,7 @@ const HireMe = () => {
               to anyone else.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-4'>
+          <AccordionItem value="item-4">
             <AccordionTrigger>Never gonna make you cry.</AccordionTrigger>
             <AccordionContent>
               I&apos;m a calm person who can make fun of anything.
@@ -59,13 +59,13 @@ const HireMe = () => {
               I&apos;ll be the one trying to calm it down.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-5'>
+          <AccordionItem value="item-5">
             <AccordionTrigger>Never gonna say goodbye.</AccordionTrigger>
             <AccordionContent>
               I&apos;ll never say goodbye until my job is done.
             </AccordionContent>
           </AccordionItem>
-          <AccordionItem value='item-6'>
+          <AccordionItem value="item-6">
             <AccordionTrigger>
               Never gonna tell a lie and hurt you.
             </AccordionTrigger>

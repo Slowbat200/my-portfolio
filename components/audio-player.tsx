@@ -7,7 +7,7 @@ const BackgroundPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
-    audioRef.current = new Audio('/slap-house.mp3');
+    audioRef.current = new Audio('/christmas.mp3');
     audioRef.current.volume = 0.3;
     audioRef.current.loop = true;
   }, []);
@@ -23,7 +23,7 @@ const BackgroundPlayer: React.FC = () => {
     }
   };
   return (
-    <div className='fixed bottom-5 left-2 z-40 dark:bg-cyan-700 text-white bg-sky-500 rounded-full p-2'>
+    <div className='fixed bottom-5 left-2 z-40 dark:bg-[#C80036] bg-[#FF6969] text-white rounded-full p-2'>
       {isPlaying ? (
         <VolumeX
           onClick={togglePlay}

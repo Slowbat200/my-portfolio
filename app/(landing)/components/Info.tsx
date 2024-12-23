@@ -26,15 +26,15 @@ const Info = () => {
       )}
       <div className='relative xs:max-container px-8 mx-2 my-14 md:pt-10'>
         <motion.h1 
-          className='dark:text-white text-black text-4xl md:text-5xl lg:text-6xl font-semibold text-center'
+          className='dark:text-white text-white text-4xl md:text-5xl lg:text-6xl font-semibold text-center'
           initial={{ opacity: 0, y: -20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5 }}
-        >
+        > {/** Text is white because of the snowfall */}
           What I do?
         </motion.h1>
         <motion.p 
-          className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter'
+          className='md:text-[22px] text-[17px] mt-5 text-justify tracking-tighter text-white'
           initial={{ opacity: 0, y: 20 }} 
           whileInView={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.5 }}
