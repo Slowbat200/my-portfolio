@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useCallback } from 'react';
 import Particles from 'react-tsparticles';
 import { loadFull } from 'tsparticles';
@@ -38,12 +36,8 @@ export const Snowfall = () => {
       move: {
         enable: true,
         speed: 2,
-        direction: 'bottom',
         random: false,
         straight: false,
-        outModes: {
-          default: 'out',
-        },
       },
     },
     background: {
@@ -57,7 +51,7 @@ export const Snowfall = () => {
     <Particles
       id='tsparticles'
       init={particlesInit}
-      options={particlesOptions} //@ts-ignore
+      options={particlesOptions}
     />
   );
 };
