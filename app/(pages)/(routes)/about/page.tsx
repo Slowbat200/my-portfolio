@@ -14,6 +14,7 @@ import { useEffect, useState } from 'react';
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Snowfall } from '@/components/ui/snow-fall';
+import { FireLoader } from '@/components/loader';
 
 // Define the interface for the skill
 interface Skill {
@@ -98,6 +99,23 @@ const AboutPage = () => {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading for demonstration
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2000); // Remove this in production
+  }, []);
+
+  // Hide overflow when loading
+  useEffect(() => {
+    if (loading) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }, [loading]);
+
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -135,10 +153,14 @@ const AboutPage = () => {
 
   if (!isMounted) return null;
   return (
-    <section className='max-container relative'>
-      <Snowfall />
+    <section className='max-container relative h-full'>
+       {loading && (
+        <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
+          <FireLoader loading={loading} size={50} />
+        </div>
+      )}
       <motion.h1
-        className='text-center sm:text-5xl text-3xl sm:leading-snug pt-10'
+        className='text-center sm:text-5xl text-3xl sm:leading-snug md:pt-28'
         initial={{ opacity: 0, scale: 0.5 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{
@@ -147,12 +169,12 @@ const AboutPage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        <span className='christmas-gradient_text font-semibold drop-shadow'>
+        <span className='blue_gradient_text font-semibold drop-shadow'>
           About me
         </span>{' '}
       </motion.h1>
       <div className='mt-5 flex flex-col gap-3'> 
-        <span className='md:text-[20px] text-[17px] mt-5 text-justify tracking-tighter text-white z-40'> {/** Text is white because of the snowfall */}
+        <span className='md:text-[20px] text-[17px] mt-5 text-justify tracking-tighter dark:text-white text-[#1C1B29] z-40'> {/** Text is white because of the snowfall */}
           <Typewriter
             options={{
               strings: [
@@ -178,7 +200,7 @@ const AboutPage = () => {
               delay: 0.5,
               ease: [0, 0.71, 0.2, 1.01],
             }}
-            className='font-semibold text-center sm:text-left sm:text-3xl text-xl relative font-poppins text-white'
+            className='font-semibold text-center sm:text-left sm:text-3xl text-xl relative font-poppins dark:text-white text-[#1C1B29]'
           >
             My Skills
           </motion.h3> {/** Text is white because of the snowfall */}
@@ -230,6 +252,7 @@ const AboutPage = () => {
             />
           )}
         </div>
+
         <div className='z-40'>
           <AlternateTimeline />
         </div>

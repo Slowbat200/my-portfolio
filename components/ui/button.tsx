@@ -17,8 +17,8 @@ const buttonVariants = cva(
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "dark:text-primary text-white underline-offset-4 hover:underline",
-        section: 'border-[4px] border-[#00aa10] rounded-full hover:scale-125 p-[3px] hover:border-0 hover:bg-gradient-to-r from-[#31AA75] to-[#A2EF44] transition-all', //christmas colors, needs to be changed back afte new year
+        link: "dark:text-primary text-[#374151 ] underline-offset-4 hover:underline",
+        section: 'border-[4px] border-[#F43F5E] rounded-full hover:scale-125 p-[3px] hover:border-0 hover:bg-[#E11D48] transition-all', //winter colors, needs to be changed back after new seasion
         submit: 'bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-400 text-white border-0',
       },
       size: {

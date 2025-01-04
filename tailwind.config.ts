@@ -23,6 +23,9 @@ const config = {
       },
     },
     extend: {
+      backgroundSize: {
+        '400%': '400% 400%',
+      },
       colors: {
         neon_green: '#39FF14',
         border: 'hsl(var(--border))',
@@ -65,6 +68,7 @@ const config = {
         sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
+    
         'accordion-down': {
           from: { height: '0' },
           to: { height: 'var(--radix-accordion-content-height)' },

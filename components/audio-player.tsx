@@ -2,6 +2,7 @@
 
 import { Volume2, VolumeX } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
+import { ModeToggle } from './mode-toggle';
 
 const BackgroundPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -23,18 +24,24 @@ const BackgroundPlayer: React.FC = () => {
     }
   };
   return (
-    <div className='fixed bottom-5 left-2 z-40 dark:bg-[#C80036] bg-[#FF6969] text-white rounded-full p-2'>
-      {isPlaying ? (
-        <VolumeX
-          onClick={togglePlay}
-          className='w-7 h-7 md:h-8 md:w-8 cursor-pointer'
-        />
-      ) : (
-        <Volume2
-          onClick={togglePlay}
-          className='w-7 h-7 md:h-8 md:w-8 cursor-pointer'
-        />
-      )}
+    <div className='fixed flex flex-row-reverse gap-x-5 justify-center items-center left-5 bottom-5 z-40'>
+      <div className='flex md:hidden'>
+        {' '}
+        <ModeToggle />
+      </div>
+      <div className='dark:bg-[#C80036] bg-[#FF6969] text-white rounded-full p-2'>
+        {isPlaying ? (
+          <VolumeX
+            onClick={togglePlay}
+            className='w-7 h-7 md:h-8 md:w-8 cursor-pointer'
+          />
+        ) : (
+          <Volume2
+            onClick={togglePlay}
+            className='w-7 h-7 md:h-8 md:w-8 cursor-pointer'
+          />
+        )}
+      </div>
     </div>
   );
 };

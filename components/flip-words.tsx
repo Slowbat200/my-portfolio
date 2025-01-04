@@ -1,6 +1,6 @@
 'use client';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { AnimatePresence, motion, LayoutGroup } from 'framer-motion';
+import React, { useCallback, useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
 
 export const FlipWords = ({
@@ -59,9 +59,9 @@ export const FlipWords = ({
           position: 'absolute',
         }}
         className={cn(
-          'z-10 inline-block relative text-left text-neutral-100 dark:text-neutral-100 px-2',
+          'z-10 inline-block relative text-left text-[#1F2937] dark:text-neutral-100 px-2',
           className
-        )} // Text is white because of the snowfall
+        )} // Text is gray because of the winter layout
         key={currentWord}
       >
         {currentWord.split('').map((letter, index) => (

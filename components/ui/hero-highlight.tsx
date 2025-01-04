@@ -86,7 +86,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block pb-1 px-1 rounded-lg bg-gradient-to-r from-[#C9182B] to-[#F23A3A] dark:from-[#DA1212] dark:to-[#F08C00]`, //christmas colors
+        `relative inline-block pb-1 px-1 rounded-lg bg-[#14B8A6]`, //winter colors
         className
       )}
     >

@@ -76,22 +76,21 @@ const ContactPage = () => {
   };
 
   return (
-    <section className='relative flex lg:flex-row flex-col max-container h-[100vh]'>
-      <Snowfall />
+    <section className='relative flex lg:flex-row flex-col max-container h-full'>
       <motion.div
-        className='flex-1 min-w-[50%] flex flex-col pt-10'
+        className='flex-1 min-w-[50%] flex flex-col '
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className='dark:text-white text-white text-4xl md:text-5xl lg:text-6xl font-semibold'> {/** Text is white because of the snowfall */}
-          Get <span className='christmas-gradient_text drop-shadow'>in touch</span>
+        <h1 className='dark:text-white text-[#1F2937] text-4xl md:text-5xl lg:text-6xl font-semibold'> {/** Text is white because of the snowfall */}
+          Get <span className='blue_gradient_text drop-shadow'>in touch</span>
         </h1>
         <Form {...Useform}>
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className='space-y-8 py-10 flex flex-col'
+            className='space-y-8 py-10 flex flex-col '
           >
             <FormField
               name='name'
@@ -103,6 +102,7 @@ const ContactPage = () => {
                       placeholder='John Doe'
                       required
                       onChange={handleChange}
+                      className='bg-white text-[#1F2937]'
                     />
                   </FormControl>
                   <FormDescription>What&apos;s your name?</FormDescription>
@@ -120,6 +120,8 @@ const ContactPage = () => {
                       required
                       value={form.email}
                       onChange={handleChange}
+                      className='bg-white text-[#1F2937]'
+
                     />
                   </FormControl>
                   <FormDescription>What&apos;s your email?</FormDescription>
@@ -139,6 +141,8 @@ const ContactPage = () => {
                       required
                       name='message'
                       placeholder='Let me know how I can help you.'
+                      className='bg-white text-[#1F2937]'
+
                     />
                   </FormControl>
                   <FormDescription>What&apos;s your message</FormDescription>
@@ -149,7 +153,7 @@ const ContactPage = () => {
               disabled={isLoading}
               type='submit'
               className={cn(
-                'btn hover:scale-110 transition text-white py-2 px-4 md:w-fit rounded text-sm',
+                'btn hover:scale-110 transition text-white py-2 px-4 md:w-fit rounded text-sm ',
                 font.className
               )}
             >

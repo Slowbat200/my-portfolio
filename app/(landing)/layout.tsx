@@ -14,9 +14,9 @@ const LandingLayout = async ({ children }: { children: React.ReactNode }) => {
       <main className=' h-full'>
         {children}
         <div>
-            <BackgroundPlayer />
-          </div>
-        </main>
+          <BackgroundPlayer />
+        </div>
+      </main>
     </div>
   );
 };

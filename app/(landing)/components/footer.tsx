@@ -17,25 +17,26 @@ export const Footer = () => {
       variants={footerVariants}
       initial='hidden'
       animate='show'
-      className='bg-gray-900 text-white py-10 px-5 md:px-10'
+      className='dark:bg-[#1E293B] bg-[#F4F8FB ] text-[#1E3A8A] dark:text-white  py-10 px-5 md:px-10'
     >
       <div className='container mx-auto mb-10 grid grid-cols-1 md:grid-cols-3 gap-8'>
         {/* Logo or Brand Name */}
         <div className='text-center md:text-left'>
-          <h1 className='text-3xl font-bold neon-text'>Slowbat</h1>
-            <p className='mt-2 text-sm text-gray-400'>
-            Marry Christmas and happy new year to everyone. &#127876;&#127873;
-            </p>
+          <h1 className='text-3xl font-bold'>Slowbat</h1>
+          <p className='mt-2 text-sm dark:text-gray-300 text-[#1C1B29]'>
+          Delivering exceptional experiences through innovative design and
+          cutting-edge development.
+          </p>
         </div>
 
         {/* Navigation Links */}
         <div className='text-center'>
-          <h3 className='text-xl font-semibold neon-text'>Quick Links</h3>
+          <h3 className='text-xl font-semibold '>Quick Links</h3>
           <ul className='mt-4 flex flex-col justify-center items-center space-y-2'>
             <li>
               <Link
                 href='/about'
-                className='text-gray-300 hover:text-neon-green'
+                className='text-[#374151 ] hover:text-neon-green'
               >
                 About Me
               </Link>
@@ -43,7 +44,7 @@ export const Footer = () => {
             <li>
               <Link
                 href='/projects'
-                className='text-gray-300 hover:text-neon-green'
+                className='text-[#374151 ] hover:text-neon-green'
               >
                 Projects
               </Link>
@@ -51,7 +52,7 @@ export const Footer = () => {
             <li>
               <a
                 href='/contact'
-                className='text-gray-300 hover:text-neon-green'
+                className='text-[#374151 ] hover:text-neon-green'
               >
                 Contact
               </a>
@@ -60,7 +61,7 @@ export const Footer = () => {
         </div>
         {/* Social Media Icons */}
         <div>
-          <h3 className='text-xl font-semibold neon-text text-center '>
+          <h3 className='text-xl font-semibold text-center '>
             Social Links
           </h3>
           <div className='flex justify-center items-center col-span-2 space-x-3.5 mt-4'>
@@ -98,7 +99,7 @@ export const Footer = () => {
       <Separator />
 
       {/* Copyright */}
-      <div className='mt-8 text-center text-gray-500'>
+      <div className='mt-8 text-center dark:text-gray-300 text-[#1C1B29]'>
         <p>Coded with &#x2764;&#xfe0f; by Slowbat</p>
       </div>
     </motion.footer>

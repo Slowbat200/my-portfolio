@@ -241,8 +241,8 @@ body,
 }
 
 @layer utilities {
-  .blue-gradient_text {
-    @apply bg-gradient-to-r from-[#00c6ff] to-[#0072ff] bg-clip-text text-transparent;
+  .blue_gradient_text {
+    @apply bg-gradient-to-r from-[#00c9ff] to-[#328eff] bg-clip-text text-transparent;
   }
   .christmas-gradient_text {
     @apply bg-gradient-to-r from-[#DE356A] to-[#540E33] bg-clip-text text-transparent;
@@ -261,15 +261,15 @@ body,
     @apply w-full flex items-center md:flex-row flex-col sm:mt-16 mt-8 gap-7;
   }
 
-  /** Text is white because of the snowfall */
+  /** Text is gray because of the winter */
   .cta-text {
-    @apply text-[#fff] dark:text-white font-extrabold flex-1 text-3xl max-md:text-center; 
+    @apply text-[#1F2937] dark:text-white font-extrabold flex-1 text-3xl max-md:text-center; 
   }
   .max-container {
     @apply max-w-5xl mx-auto sm:p-16 pb-12 !pt-[56px] px-8 min-h-[calc(50vh-80px)];
   }
   .btn {
-    @apply text-white bg-gradient-to-r from-[#DA1212] to-[#F08C00] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-10 text-center;
+    @apply text-[#0F172A] dark:text-white bg-[#14B8A6] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 my-10 text-center;
   }
   .input {
     @apply bg-transparent border text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mt-2.5 font-normal shadow-card;
@@ -484,3 +484,24 @@ body,
 }
 
 
+.winter-layout{
+background-size: 400% 400%;
+animation: aurora 8s ease-in-out infinite;
+}
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

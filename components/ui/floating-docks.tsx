@@ -53,7 +53,7 @@ const FloatingDockMobile = ({
   };
 
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("relative block md:hidden ", className)}>
       {loading && (
         <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[999999]'>
           <FireLoader loading={loading} size={50} />
@@ -63,7 +63,7 @@ const FloatingDockMobile = ({
         {open && (
           <motion.div
             layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2 z-50"
+            className="absolute bottom-full mb-2 px-2 py-2 rounded-md flex flex-col gap-2 z-50 bg-black/20 dark:bg-transparent"
           >
             {items.map((item, idx) => (
               <motion.div

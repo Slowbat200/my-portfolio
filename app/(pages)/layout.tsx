@@ -2,10 +2,9 @@ import BackgroundPlayer from '@/components/audio-player';
 import { MobileNavbar } from '@/components/mobile-navbar';
 import { Navbar } from '@/components/navbar';
 
-
 const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='h-full'>
+    <div>
       <div className='hidden md:flex'>
         {' '}
         <Navbar />
@@ -14,10 +13,11 @@ const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
         {' '}
         <MobileNavbar />
       </div>
-      <main className='md:pl-20 pt-16 h-full'>{children}
-      <div>
-            <BackgroundPlayer />
-          </div>
+      <main className='h-full bg-[#FED7D7] dark:bg-[#1E40AF]'>
+        {children}
+        <div>
+          <BackgroundPlayer />
+        </div>
       </main>
     </div>
   );
