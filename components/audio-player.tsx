@@ -8,7 +8,7 @@ const BackgroundPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
-    audioRef.current = new Audio('/christmas.mp3');
+    audioRef.current = new Audio('/winter.mp3');
     audioRef.current.volume = 0.3;
     audioRef.current.loop = true;
   }, []);
