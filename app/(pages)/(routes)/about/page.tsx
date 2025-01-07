@@ -227,12 +227,12 @@ const AboutPage = () => {
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className='block-container w-20 h-20'
               >
-                <div className='btn-back rounded-xl shadow-[5px_0px_30px_#555] dark:shadow-[5px_0px_30px_#a1a]' />
+                <div className='btn-back rounded-xl shadow-[5px_0px_30px_#555] dark:shadow-[5px_0px_30px_#fff]' />
                 <motion.div
                   initial={{ opacity: 1 }}
                   onClick={() => openModal(skill)}
                 >
-                  <div className='btn-front rounded-xl cursor-pointer flex justify-center items-center'>
+                  <div className='btn-front rounded-xl cursor-pointer flex justify-center items-center dark:bg-[#ffffff20] bg-[#00000020]'>
                     <Image
                       src={skill.image}
                       alt={skill.name}

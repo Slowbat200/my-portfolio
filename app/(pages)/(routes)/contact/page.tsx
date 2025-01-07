@@ -83,7 +83,7 @@ const ContactPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className='dark:text-white text-[#1F2937] text-4xl md:text-5xl lg:text-6xl font-semibold'> {/** Text is white because of the snowfall */}
+        <h1 className='dark:text-white text-[#1F2937] text-4xl md:text-5xl lg:text-6xl font-semibold md:pt-28'> {/** Text is white because of the snowfall */}
           Get <span className='blue_gradient_text drop-shadow'>in touch</span>
         </h1>
         <Form {...Useform}>
