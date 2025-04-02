@@ -17,13 +17,13 @@ export const Footer = () => {
       variants={footerVariants}
       initial='hidden'
       animate='show'
-      className='dark:bg-[#1E293B] bg-[#F4F8FB ] text-[#1E3A8A] dark:text-white  py-10 px-5 md:px-10'
+      className='dark:bg-[#1C4532] bg-[#D1FAE5] text-[#065F46] dark:text-[#A7F3D0] py-10 px-5 md:px-10'
     >
       <div className='container mx-auto mb-10 grid grid-cols-1 md:grid-cols-3 gap-8'>
         {/* Logo or Brand Name */}
         <div className='text-center md:text-left'>
           <h1 className='text-3xl font-bold'>Slowbat</h1>
-          <p className='mt-2 text-sm dark:text-gray-300 text-[#1C1B29]'>
+          <p className='mt-2 text-sm'>
           Delivering exceptional experiences through innovative design and
           cutting-edge development.
           </p>

@@ -47,7 +47,7 @@ export const CTA = () => {
         Have a projects in your mind? <br className='sm:block hidden' />{' '}
         Let&apos;s build it together
       </p>
-      <Button className='btn hover:scale-110 hover:bg-[#2DD4BF] transition z-40'>
+      <Button className='btn hover:scale-110 hover:bg-[#10B981] dark:hover:bg-[#2C7A7B] transition z-40'>
         <Link
           onClick={handleCtaLoader}
           href='/contact'

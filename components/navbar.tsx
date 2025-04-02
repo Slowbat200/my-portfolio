@@ -37,7 +37,7 @@ export const Navbar = ({ className }: Props) => {
         </div>
       )}
       {/* Colors updated for winter, the previouse colors for dark border is:00fff  */}
-      <div className='flex justify-around items-center h-full border dark:border-[#1E40AF] border-[#4ccdde] shadow-input rounded-full py-5 bg-transparent backdrop-blur-xl'>
+      <div className='flex justify-around items-center h-full border dark:border-[#9F7AEA] border-[#4ccdde] shadow-input rounded-full py-5 bg-transparent backdrop-blur-xl'>
         <div className='pr-[100px]'>
           <h1 className='text-3xl text-[#1F2937] dark:text-white'>Slowbat</h1>  {/** Text is gray because of the winter */}
         </div>

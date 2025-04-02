@@ -8,7 +8,7 @@ const BackgroundPlayer: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {
-    audioRef.current = new Audio('/winter.mp3');
+    audioRef.current = new Audio('/spring.mp3');
     audioRef.current.volume = 0.3;
     audioRef.current.loop = true;
   }, []);
@@ -29,7 +29,7 @@ const BackgroundPlayer: React.FC = () => {
         {' '}
         <ModeToggle />
       </div>
-      <div className='dark:bg-[#C80036] bg-[#FF6969] text-white rounded-full p-2'>
+      <div className='dark:bg-[#9F7AEA] bg-[#ba9ef3] text-white rounded-full p-2'>
         {isPlaying ? (
           <VolumeX
             onClick={togglePlay}

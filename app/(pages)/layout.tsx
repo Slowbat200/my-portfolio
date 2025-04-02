@@ -13,7 +13,7 @@ const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
         {' '}
         <MobileNavbar />
       </div>
-      <main className='h-full bg-[#FED7D7] dark:bg-[#1E40AF]'>
+      <main className='h-full bg-[#FFF7ED] dark:bg-[#2D3748]'>
         {children}
         <div>
           <BackgroundPlayer />

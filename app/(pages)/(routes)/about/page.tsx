@@ -13,7 +13,6 @@ import Typewriter from 'typewriter-effect';
 import { useEffect, useState } from 'react';
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { Snowfall } from '@/components/ui/snow-fall';
 import { FireLoader } from '@/components/loader';
 
 // Define the interface for the skill
@@ -37,7 +36,7 @@ const Modal = ({ skill, onClose, onNext, onPrevious }: ModalProps) => {
 
   return (
     <motion.div
-      className='dark:bg-black bg-gray-800 text-white fixed inset-0 flex justify-center items-center z-50'
+      className='dark:bg-[#1E293B] bg-[#F0FDFA] text-[#065F46] dark:text-[#A7F3D0] fixed inset-0 flex justify-center items-center z-50'
       onClick={onClose}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -53,7 +52,7 @@ const Modal = ({ skill, onClose, onNext, onPrevious }: ModalProps) => {
         transition={{ duration: 0.3 }}
       >
         <span
-          className='text-3xl cursor-pointer absolute top-5 right-5 text-black'
+          className='text-3xl cursor-pointer absolute top-5 right-5 text-[#92400e]'
           onClick={onClose}
         >
           &times;
@@ -67,7 +66,7 @@ const Modal = ({ skill, onClose, onNext, onPrevious }: ModalProps) => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
             className='flex flex-col-reverse md:flex-row-reverse gap-x-10 justify-center items-center'
           >
             <p>{skill.description}</p>
@@ -115,7 +114,6 @@ const AboutPage = () => {
     }
   }, [loading]);
 
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -154,7 +152,7 @@ const AboutPage = () => {
   if (!isMounted) return null;
   return (
     <section className='max-container relative h-full'>
-       {loading && (
+      {loading && (
         <div className='fixed top-0 left-0 w-full h-full bg-black flex justify-center items-center z-[9999]'>
           <FireLoader loading={loading} size={50} />
         </div>
@@ -169,12 +167,14 @@ const AboutPage = () => {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        <span className='blue_gradient_text font-semibold drop-shadow'>
+        <span className='spring_gradient_text font-semibold drop-shadow'>
           About me
         </span>{' '}
       </motion.h1>
-      <div className='mt-5 flex flex-col gap-3'> 
-        <span className='md:text-[20px] text-[17px] mt-5 text-justify tracking-tighter dark:text-white text-[#1C1B29] z-40'> {/** Text is white because of the snowfall */}
+      <div className='mt-5 flex flex-col gap-3'>
+        <span className='md:text-[20px] text-[17px] mt-5 text-justify tracking-tighter dark:text-white text-[#1C1B29] z-40'>
+          {' '}
+          {/** Text is white because of the snowfall */}
           <Typewriter
             options={{
               strings: [
@@ -203,8 +203,8 @@ const AboutPage = () => {
             className='font-semibold text-center sm:text-left sm:text-3xl text-xl relative font-poppins dark:text-white text-[#1C1B29]'
           >
             My Skills
-          </motion.h3> {/** Text is white because of the snowfall */}
-
+          </motion.h3>{' '}
+          {/** Text is white because of the snowfall */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -227,7 +227,7 @@ const AboutPage = () => {
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 className='block-container w-20 h-20'
               >
-                <div className='btn-back rounded-xl shadow-[5px_0px_30px_#555] dark:shadow-[5px_0px_30px_#fff]' />
+                <div className='btn-back rounded-xl shadow-[5px_0px_30px_#4A5568] dark:shadow-[5px_0px_30px_#A7F3D0]' />
                 <motion.div
                   initial={{ opacity: 1 }}
                   onClick={() => openModal(skill)}

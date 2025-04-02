@@ -15,8 +15,8 @@ const Blob = () => {
         <image
           x='100'
           y='100'
-          width='70%'
-          height='90%'
+          width='68%'
+          height='70%'
           clipPath='url(#shape)'
           href='/profile.png'
           preserveAspectRatio='none'

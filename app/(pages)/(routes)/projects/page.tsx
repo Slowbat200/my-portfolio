@@ -19,6 +19,7 @@ import { motion } from 'framer-motion';
 import { staggerContainer } from '@/utils/motion';
 import { useEffect, useState } from 'react';
 import { FireLoader } from '@/components/loader';
+import { ArrowRight } from 'lucide-react';
 
 const ProjectPage = () => {
   const [loading, setLoading] = useState(false);
@@ -51,7 +52,7 @@ const ProjectPage = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <span className='blue_gradient_text font-semibold drop-shadow'>
+        <span className='spring_gradient_text font-semibold drop-shadow'>
           My Projects
         </span>
       </motion.h1>
@@ -91,7 +92,7 @@ const ProjectPage = () => {
             transition={{ duration: 0.5 }}
           >
             <Card
-              className='lg:w-[400px] w-full h-full border border-[#3B82F6]'
+              className='lg:w-[400px] w-full h-full border border-[#4A5568]'
               key={project.id}
             >
               <CardHeader className={`btn-back rounded-xl ${project.theme}`}>
@@ -115,13 +116,9 @@ const ProjectPage = () => {
                   href={project.link}
                   className='font-semibold dark:text-white text-[#1C1B29] z-50'
                 >
-                  Live link
+                  Live link 
                 </Link>
-                <Image
-                  src={arrow}
-                  alt='arrow'
-                  className='w-4 h-4 object-contain z-50'
-                />
+                  <ArrowRight />
               </CardFooter>
             </Card>
           </motion.div>

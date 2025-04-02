@@ -55,7 +55,9 @@ export default function Home() {
           <FireLoader loading={loading} size={50} />
         </div>
       )}
-      <section className='flex flex-col items-center justify-between md:p-24 p-0 h-screen winter-layout dark:bg-gradient-to-br dark:from-[#0F172A] dark:via-[#1E40AF] dark:to-[#F43F5E] bg-gradient-to-br from-[#CFFAFE] via-[#A7F3D0] to-[#FDE68A] z-50'>
+      <section
+        className='flex flex-col items-center justify-between md:p-24 p-0 h-screen winter-layout dark:bg-gradient-to-br dark:from-[#22543D] dark:via-[#2C7A7B] dark:to-[#9F7AEA] bg-gradient-to-br from-[#F0FFF4] via-[#D1FAE5] to-[#F0FFF4] z-50'
+      >
         <motion.div
           className='items-center justify-between font-mono text-sm lg:flex'
           initial={{ opacity: 0 }}
@@ -78,35 +80,25 @@ export default function Home() {
             </motion.h1>
             <span className='text-md sm:text-xl md:text-2xl lg:text-3xl pt-10 font-semibold text-center text-white'>
               {' '}
-              {/** Text is white because of the winter */}
               <FlipWords words={words} />
             </span>
             <div className='flex flex-row gap-3.5 pt-5 justify-center items-center z-10'>
               <Hint label='Instagram' side='bottom'>
-                <Button
-                  variant='link'
-                  className='z-50 dark:bg-transparent'
-                >
+                <Button variant='link' className='z-50 dark:bg-transparent'>
                   <Link href='https://www.instagram.com/slowbat201/'>
                     <FaInstagram size={34} />
                   </Link>
                 </Button>
               </Hint>
               <Hint label='Github' side='bottom'>
-                <Button
-                  variant='link'
-                  className='z-50 dark:bg-transparent'
-                >
+                <Button variant='link' className='z-50 dark:bg-transparent'>
                   <Link href='https://github.com/Slowbat200'>
                     <FaGithub size={34} />
                   </Link>
                 </Button>
               </Hint>
               <Hint label='Linkedin' side='bottom'>
-                <Button
-                  variant='link'
-                  className='z-50 dark:bg-transparent'
-                >
+                <Button variant='link' className='z-50 dark:bg-transparent'>
                   <Link href='https://www.linkedin.com/in/jakub-pavlovic-33b765285/'>
                     <FaLinkedin size={34} />
                   </Link>
@@ -120,7 +112,7 @@ export default function Home() {
         </motion.div>
         {/** Button section with animation */}
         <section id='button'>
-          <div className='md:mt-[8em] my-10 relative  md:z-10 lg:mx-[8em] ml-0 md:my-[3em] md:landscape:right-[5rem] landscape:left-[0rem]'>
+          <div className='md:mt-[5em] my-10 relative md:z-10 lg:mx-[8em] ml-0 md:my-[3em] md:landscape:right-[5rem] landscape:left-[0rem]'>
             <Button variant='section' onClick={handleScroll}>
               <ArrowBigDownIcon
                 size={30}
@@ -131,9 +123,8 @@ export default function Home() {
           </div>
         </section>
       </section>
-      {/* <BackgroundBeams /> */}
       {/** Info and CTA section */}
-      <section id='next-section' className='dark:bg-[#1E40AF] bg-[#FED7D7]'>
+      <section id='next-section' className='dark:bg-[#22543D] bg-[#F0FFF4]'>
         <div className='relative'>
           <div className='gradient-02' />
         </div>
