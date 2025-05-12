@@ -6,6 +6,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import FolderIcon from '@mui/icons-material/Folder';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
+import { Gamepad2Icon } from 'lucide-react';
 export function MobileNavbar() {
   const links = [
     {
@@ -25,6 +26,11 @@ export function MobileNavbar() {
       title: 'Project',
       icon: <FolderIcon />,
       href: '/projects',
+    },
+    {
+      title: 'Hangman',
+      icon: <Gamepad2Icon />,
+      href: '/game',
     },
     {
       title: 'Contact',

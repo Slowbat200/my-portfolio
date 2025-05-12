@@ -4,7 +4,7 @@ import { Navbar } from '@/components/navbar';
 
 const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <div className='h-full overflow-hidden bg-[#FFF7ED] dark:bg-[#2D3748]'>
       <div className='hidden md:flex'>
         {' '}
         <Navbar />
@@ -13,7 +13,7 @@ const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
         {' '}
         <MobileNavbar />
       </div>
-      <main className='h-full bg-[#FFF7ED] dark:bg-[#2D3748]'>
+      <main className='h-full'>
         {children}
         <div>
           <BackgroundPlayer />
