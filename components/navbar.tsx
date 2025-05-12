@@ -50,8 +50,8 @@ export const Navbar = ({ className }: Props) => {
         <Link href='/projects' onClick={handleLinkLoader}>
           <span className='text-[#1F2937] dark:text-white'>My Projects</span> {/** Text is gray because of the winter */}
         </Link>
-        <Link href='/game' onClick={handleLinkLoader}>
-          <span className='text-[#1F2937] dark:text-white'>Hangman</span> {/** Text is gray because of the winter */}
+        <Link href='/games' onClick={handleLinkLoader}>
+          <span className='text-[#1F2937] dark:text-white'>Games</span> {/** Text is gray because of the winter */}
         </Link>
         <Link href='/contact' onClick={handleLinkLoader}>
           <span className='text-[#1F2937] dark:text-white'>Contact Me</span> {/** Text is gray because of the winter */}

@@ -3,17 +3,17 @@
 import React, { useState, useRef, useEffect } from "react";
 
 const initialOutput = [
-  "Welcome to Console Game!",
+  "Welcome to Hangman Console Game!",
   "Type 'start' to play Hangman or 'help' for commands."
 ];
 
-const words = ["react", "portfolio", "console", "developer", "typescript"];
+const words = ["react", "portfolio", "console", "developer", "typescript", "javascript", "hangman", "frontend", "backend", "api", "random", "game", "nextjs", "tailwind", "component", "function", "variable", "object", "array", "state"];
 
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
 
-export default function ConsoleGame() {
+export default function Hangman() {
   const [output, setOutput] = useState(initialOutput);
   const [input, setInput] = useState("");
   const [game, setGame] = useState<null | { word: string; guessed: string[]; wrong: number; active: boolean }>(null);
@@ -81,7 +81,7 @@ export default function ConsoleGame() {
   };
 
   return (
-    <div className="bg-black text-green-400 font-mono p-4 rounded h-[500px] max-w-xl mx-auto mt-36 shadow-lg flex flex-col">
+    <div className="bg-black border border-green-400 text-green-400 font-mono p-4 rounded h-[500px] max-w-xl mx-auto mt-36 shadow-lg flex flex-col">
       <div ref={outputRef} className="flex-1 overflow-y-auto mb-2 whitespace-pre-line" style={{ minHeight: 0 }}>
         {output.map((line, i) => (
           <div key={i}>{line}</div>

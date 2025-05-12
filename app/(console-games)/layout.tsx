@@ -2,9 +2,9 @@ import BackgroundPlayer from '@/components/audio-player';
 import { MobileNavbar } from '@/components/mobile-navbar';
 import { Navbar } from '@/components/navbar';
 
-const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
+const GamesLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='bg-[#FFF7ED] dark:bg-[#2D3748]'>
+    <div className='bg-black h-full overflow-hidden'>
       <div className='hidden md:flex'>
         {' '}
         <Navbar />
@@ -23,4 +23,4 @@ const PagesLayout = async ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default PagesLayout;
+export default GamesLayout;

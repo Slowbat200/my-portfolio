@@ -28,9 +28,9 @@ export function MobileNavbar() {
       href: '/projects',
     },
     {
-      title: 'Hangman',
+      title: 'Games',
       icon: <Gamepad2Icon />,
-      href: '/game',
+      href: '/games',
     },
     {
       title: 'Contact',
