@@ -16,6 +16,12 @@ const games = [
     preview: '/hangman-preview.png', // You can replace this with your preview image path
     link: '/hangman', // Adjust this if your route is different
   },
+  {
+    name: 'Tic-tac-toe',
+    description: 'Can you beat AI in tic-tac-toe?.',
+    preview: '/tic-tac-toe-preview.png', // You can replace this with your preview image path
+    link: '/tic-tac-toe', // Adjust this if your route is different
+  },
   // Add more games here as needed
 ];
 
