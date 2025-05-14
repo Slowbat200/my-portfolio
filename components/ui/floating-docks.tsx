@@ -16,6 +16,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import { FireLoader } from "../loader";
+import { MenuIcon } from "lucide-react";
 
 export const FloatingDock = ({
   items,
@@ -98,7 +99,7 @@ const FloatingDockMobile = ({
         onClick={() => setOpen(!open)}
         className="h-12 w-12 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-200" />
+        <MenuIcon className="h-5 w-5 text-neutral-500 dark:text-neutral-200" />
       </button>
     </div>
   );
