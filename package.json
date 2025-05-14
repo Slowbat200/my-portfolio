@@ -33,6 +33,7 @@
     "@types/three": "^0.171.0",
     "animate.css": "^4.1.1",
     "axios": "^1.7.2",
+    "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "convex": "^1.17.2",
