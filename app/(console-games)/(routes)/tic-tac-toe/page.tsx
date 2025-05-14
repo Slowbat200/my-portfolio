@@ -91,7 +91,7 @@ export default function TicTacToe() {
   }
 
   return (
-    <div className='dark:bg-black bg-white border border-blue-400 text-blue-300 font-mono p-4 rounded h-[500px] max-w-xl mx-5 lg:mx-auto mt-24 lg:mt-36 shadow-lg flex flex-col items-center'>
+    <div className='dark:bg-black bg-white border border-blue-400 text-blue-300 font-mono p-4 rounded h-[500px] max-w-xl mx-5 lg:mx-auto mt-12 lg:mt-36 shadow-lg flex flex-col items-center'>
       <h2 className='mb-4 text-xl font-bold'>Tic-Tac-Toe Console Game</h2>
       <div className='grid grid-cols-3 gap-2 mb-4'>
         {board.map((cell, i) => (
