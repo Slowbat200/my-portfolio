@@ -81,7 +81,7 @@ export default function Hangman() {
   };
 
   return (
-    <div className="bg-black border border-green-400 text-green-400 font-mono p-4 rounded h-[500px] max-w-xl lg:mx-auto mx-5 lg:mt-36 mt- shadow-lg flex flex-col">
+    <div className="bg-black border border-green-400 text-green-400 font-mono p-4 rounded h-[500px] max-w-xl lg:mx-auto mx-5 lg:mt-36 mt-12 shadow-lg flex flex-col">
       <div ref={outputRef} className="flex-1 overflow-y-auto mb-2 whitespace-pre-line" style={{ minHeight: 0 }}>
         {output.map((line, i) => (
           <div key={i}>{line}</div>
