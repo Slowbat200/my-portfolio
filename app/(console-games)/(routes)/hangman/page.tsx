@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from "react";
+import confetti from 'canvas-confetti';
 
 const initialOutput = [
   "Welcome to Hangman Console Game!",
@@ -44,6 +45,7 @@ export default function Hangman() {
           .join(" ");
         if (display.replace(/ /g, "") === game.word) {
           lines.push(`You win! The word was '${game.word}'. Type 'start' to play again.`);
+          confetti();
           setGame(null);
         } else if (wrong >= 6) {
           lines.push(`Game over! The word was '${game.word}'. Type 'start' to play again.`);
@@ -71,6 +73,8 @@ export default function Hangman() {
     }
     setOutput((prev) => [...prev, "> " + cmd, ...lines]);
   };
+
+
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
