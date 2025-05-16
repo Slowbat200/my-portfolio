@@ -22,6 +22,12 @@ const games = [
     preview: '/tic-tac-toe-preview.png', // You can replace this with your preview image path
     link: '/tic-tac-toe', // Adjust this if your route is different
   },
+  {
+    name: 'Snake',
+    description: 'Play this good old snake game.',
+    preview: '/snake-preview.png', // You can replace this with your preview image path
+    link: '/snake', // Adjust this if your route is different
+  },
   // Add more games here as needed
 ];
 
@@ -40,7 +46,7 @@ const GamesPage = () => {
               <CardDescription>{game.description}</CardDescription>
             </CardHeader>
             <CardContent className='flex flex-col items-center gap-4'>
-              <div className='w-fit h-fit bg-gray-200 dark:bg-gray-700 rounded flex items-center justify-center overflow-hidden'>
+              <div className='w-fit bg-gray-200 dark:bg-gray-700 rounded flex items-center justify-center overflow-hidden'>
                 <Image
                   src={game.preview}
                   alt={game.name + ' preview'}
@@ -49,9 +55,11 @@ const GamesPage = () => {
                   className='object-contain'
                 />
               </div>
-              <Link href={game.link} className='w-full'>
-                <Button className='w-full'>Play</Button>
-              </Link>
+              <Button className='w-full' asChild>
+                <Link href={game.link} className='flex justify-center items-center'>
+                  Play
+                </Link>
+              </Button>
             </CardContent>
           </Card>
         ))}
