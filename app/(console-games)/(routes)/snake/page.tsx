@@ -37,59 +37,6 @@ export default function SnakeGame() {
   }, [direction]);
 
   useEffect(() => {
-    const handleTouchStart = (e: TouchEvent) => {
-      const touch = e.touches[0];
-      startX = touch.clientX;
-      startY = touch.clientY;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      e.preventDefault();
-      if (!startX || !startY) return;
-
-      const touch = e.touches[0];
-      const diffX = startX - touch.clientX;
-      const diffY = startY - touch.clientY;
-
-      if (Math.abs(diffX) > Math.abs(diffY)) {
-        // Horizontal swipe
-        if (diffX > 0 && direction.x === 0) {
-          setDirection({ x: -1, y: 0 }); // Swipe left
-        } else if (diffX < 0 && direction.x === 0) {
-          setDirection({ x: 1, y: 0 }); // Swipe right
-        }
-      } else {
-        // Vertical swipe
-        if (diffY > 0 && direction.y === 0) {
-          setDirection({ x: 0, y: -1 }); // Swipe up
-        } else if (diffY < 0 && direction.y === 0) {
-          setDirection({ x: 0, y: 1 }); // Swipe down
-        }
-      }
-
-      startX = null;
-      startY = null;
-    }
-
-    let startX: number | null = null;
-    let startY: number | null = null;
-
-    const gameContainer = document.querySelector('.game-container');
-
-    if (gameContainer) {
-      gameContainer.addEventListener('touchstart', handleTouchStart as EventListener);
-      gameContainer.addEventListener('touchmove', handleTouchMove as EventListener);
-    }
-
-    return () => {
-      if (gameContainer) {
-        gameContainer.addEventListener('touchstart', handleTouchStart as EventListener);
-        gameContainer.addEventListener('touchmove', handleTouchMove as EventListener);
-      }
-    };
-  }, [direction]);
-
-  useEffect(() => {
     const interval = setInterval(() => {
       if (gameOver) return;
 
