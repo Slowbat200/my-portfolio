@@ -44,6 +44,7 @@ export default function SnakeGame() {
     };
 
     const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault();
       if (!startX || !startY) return;
 
       const touch = e.touches[0];
@@ -68,17 +69,23 @@ export default function SnakeGame() {
 
       startX = null;
       startY = null;
-    };
+    }
 
     let startX: number | null = null;
     let startY: number | null = null;
 
-    document.addEventListener('touchstart', handleTouchStart);
-    document.addEventListener('touchmove', handleTouchMove);
+    const gameContainer = document.querySelector('.game-container');
+
+    if (gameContainer) {
+      gameContainer.addEventListener('touchstart', handleTouchStart as EventListener);
+      gameContainer.addEventListener('touchmove', handleTouchMove as EventListener);
+    }
 
     return () => {
-      document.removeEventListener('touchstart', handleTouchStart);
-      document.removeEventListener('touchmove', handleTouchMove);
+      if (gameContainer) {
+        gameContainer.addEventListener('touchstart', handleTouchStart as EventListener);
+        gameContainer.addEventListener('touchmove', handleTouchMove as EventListener);
+      }
     };
   }, [direction]);
 
