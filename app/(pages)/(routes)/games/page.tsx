@@ -28,6 +28,12 @@ const games = [
     preview: '/snake-preview.png', // You can replace this with your preview image path
     link: '/snake', // Adjust this if your route is different
   },
+  {
+    name: 'Tetris',
+    description: 'Play this OG game name Tetris.',
+    preview: '/tetris-preview.png', // You can replace this with your preview image path
+    link: '/tetris', // Adjust this if your route is different
+  },
   // Add more games here as needed
 ];
 

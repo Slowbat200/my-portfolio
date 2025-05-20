@@ -1,35 +1,43 @@
+// Import necessary libraries and components
 'use client'
 
 import React, { useState, useRef, useEffect } from "react";
 import confetti from 'canvas-confetti';
 
+// Initial output messages for the game
 const initialOutput = [
   "Welcome to Hangman Console Game!",
   "Type 'start' to play Hangman or 'help' for commands."
 ];
 
+// List of words to be used in the game
 const words = ["react", "portfolio", "console", "developer", "typescript", "javascript", "hangman", "frontend", "backend", "api", "random", "game", "nextjs", "tailwind", "component", "function", "variable", "object", "array", "state"];
 
+// Function to get a random word from the list
 function getRandomWord() {
   return words[Math.floor(Math.random() * words.length)];
 }
 
+// Main Hangman component
 export default function Hangman() {
+  // State variables for output, input, and game status
   const [output, setOutput] = useState(initialOutput);
   const [input, setInput] = useState("");
   const [game, setGame] = useState<null | { word: string; guessed: string[]; wrong: number; active: boolean }>(null);
   const outputRef = useRef<HTMLDivElement>(null);
 
+  // Effect to scroll to the bottom of the output div when output changes
   useEffect(() => {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
   }, [output]);
 
+  // Function to handle commands entered by the user
   const handleCommand = (cmd: string) => {
     let lines = [];
     if (game && game.active) {
-      // Hangman guess
+      // Handle a guess in the Hangman game
       const guess = cmd.trim().toLowerCase();
       if (guess.length !== 1 || !/^[a-z]$/.test(guess)) {
         lines.push("Please enter a single letter.");
@@ -57,6 +65,7 @@ export default function Hangman() {
         }
       }
     } else {
+      // Handle non-game commands
       if (cmd === "help") {
         lines.push("Commands: start, help, clear");
       } else if (cmd === "clear") {
@@ -74,8 +83,7 @@ export default function Hangman() {
     setOutput((prev) => [...prev, "> " + cmd, ...lines]);
   };
 
-
-
+  // Function to handle form submission
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (input.trim()) {

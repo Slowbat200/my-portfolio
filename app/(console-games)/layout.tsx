@@ -4,10 +4,10 @@ import { Navbar } from '@/components/navbar';
 
 const GamesLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className='bg-black h-full overflow-hidden'>
+    <div className='bg-black h-full'>
       <div className='hidden md:flex'>
         {' '}
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
       <div className='flex md:hidden'>
         {' '}
