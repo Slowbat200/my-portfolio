@@ -7,7 +7,7 @@ const GamesLayout = async ({ children }: { children: React.ReactNode }) => {
     <div className='bg-black h-full'>
       <div className='hidden md:flex'>
         {' '}
-        {/* <Navbar /> */}
+        <Navbar />
       </div>
       <div className='flex md:hidden'>
         {' '}

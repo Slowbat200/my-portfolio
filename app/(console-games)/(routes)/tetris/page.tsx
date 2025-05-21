@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const COLS = 10;
-const ROWS = 20;
+const ROWS = 15;
 const BLOCK_SIZE = 30;
 
 const TETROMINOS = {
@@ -46,6 +46,7 @@ const Tetris = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [score, setScore] = useState(0);
   const [dropInterval, setDropInterval] = useState(1000);
+  const [isPaused, setIsPaused] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const drawBoard = (ctx: CanvasRenderingContext2D) => {
@@ -142,11 +143,17 @@ const Tetris = () => {
   }, [board, currentPiece, position]);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      dropPiece();
-    }, dropInterval);
-    return () => clearInterval(interval);
-  }, [currentPiece, position, dropInterval]);
+    if (!isPaused) {
+      const interval = setInterval(() => {
+        dropPiece();
+      }, dropInterval);
+      return () => clearInterval(interval);
+    }
+  }, [currentPiece, position, dropInterval, isPaused]);
+
+  const togglePause = () => {
+    setIsPaused(!isPaused);
+  };
 
   const handleSpeedUp = () => {
     setDropInterval(100); // Speed up the drop interval
@@ -157,8 +164,8 @@ const Tetris = () => {
   };
 
   return (
-    <div className="tetris flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
-      <canvas ref={canvasRef} width={COLS * BLOCK_SIZE} height={ROWS * BLOCK_SIZE} className="border-4 border-gray-700" />
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <canvas ref={canvasRef} width={COLS * BLOCK_SIZE} height={ROWS * BLOCK_SIZE} className="border-4 lg:mt-24 border-gray-700" />
       <div className="mt-4 text-lg">Score: {score}</div>
       <div className="flex gap-2 mt-4">
         <button onClick={() => movePiece(-1)} className="px-4 py-2 bg-blue-600 rounded hover:bg-blue-700 transition">Left</button>
@@ -170,6 +177,12 @@ const Tetris = () => {
           className="px-4 py-2 bg-green-600 rounded hover:bg-green-700 transition"
         >
           Speed Up
+        </button>
+        <button 
+          onClick={togglePause} 
+          className="px-4 py-2 bg-yellow-600 rounded hover:bg-yellow-700 transition"
+        >
+          {isPaused ? 'Resume' : 'Pause'}
         </button>
       </div>
     </div>
